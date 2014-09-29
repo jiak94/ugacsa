@@ -1,0 +1,101 @@
+[09-Jun-2014 22:59:32 America/Chicago] PHP Warning:  mysql_query() expects parameter 2 to be resource, null given in /home/ugacsaco/public_html/studentInfo.php on line 15
+[09-Jun-2014 23:05:02 America/Chicago] PHP Parse error:  syntax error, unexpected '}' in /home/ugacsaco/public_html/studentInfo.php on line 22
+[09-Jun-2014 23:06:32 America/Chicago] PHP Parse error:  syntax error, unexpected '}' in /home/ugacsaco/public_html/studentInfo.php on line 22
+[09-Jun-2014 23:16:13 America/Chicago] PHP Warning:  mysql_query() expects parameter 2 to be resource, null given in /home/ugacsaco/public_html/studentInfo.php on line 15
+[09-Jun-2014 23:16:59 America/Chicago] PHP Warning:  mysql_query() expects parameter 2 to be resource, null given in /home/ugacsaco/public_html/studentInfo.php on line 15
+[09-Jun-2014 23:19:01 America/Chicago] PHP Warning:  mysql_connect(): Access denied for user 'ugacsaco'@'localhost' (using password: NO) in /home/ugacsaco/public_html/studentInfo.php on line 2
+[09-Jun-2014 23:20:45 America/Chicago] PHP Warning:  mysql_query() expects parameter 2 to be resource, null given in /home/ugacsaco/public_html/studentInfo.php on line 15
+[09-Jun-2014 23:20:45 America/Chicago] PHP Warning:  mysql_query() expects parameter 2 to be resource, null given in /home/ugacsaco/public_html/studentInfo.php on line 15
+[09-Jun-2014 23:21:24 America/Chicago] PHP Warning:  mysql_query() expects parameter 2 to be resource, null given in /home/ugacsaco/public_html/studentInfo.php on line 15
+[09-Jun-2014 23:23:10 America/Chicago] PHP Warning:  mysql_query() expects parameter 2 to be resource, null given in /home/ugacsaco/public_html/studentInfo.php on line 14
+[09-Jun-2014 23:27:41 America/Chicago] PHP Warning:  mysql_query() expects parameter 2 to be resource, null given in /home/ugacsaco/public_html/studentInfo.php on line 12
+[09-Jun-2014 23:40:48 America/Chicago] PHP Warning:  mysql_query() expects parameter 2 to be resource, null given in /home/ugacsaco/public_html/studentInfo.php on line 12
+[09-Jun-2014 23:40:48 America/Chicago] PHP Warning:  mysql_query() expects parameter 2 to be resource, null given in /home/ugacsaco/public_html/studentInfo.php on line 15
+[09-Jun-2014 23:40:48 America/Chicago] PHP Warning:  mysql_close() expects parameter 1 to be resource, null given in /home/ugacsaco/public_html/studentInfo.php on line 17
+[09-Jun-2014 23:42:12 America/Chicago] PHP Warning:  mysql_close() expects parameter 1 to be resource, null given in /home/ugacsaco/public_html/studentInfo.php on line 22
+[09-Jun-2014 23:44:48 America/Chicago] PHP Warning:  mysql_close() expects parameter 1 to be resource, null given in /home/ugacsaco/public_html/studentInfo.php on line 22
+[09-Jun-2014 23:47:18 America/Chicago] PHP Warning:  mysql_close() expects parameter 1 to be resource, null given in /home/ugacsaco/public_html/studentInfo.php on line 22
+[10-Jun-2014 00:03:19 America/Chicago] PHP Parse error:  syntax error, unexpected 'INFO' (T_STRING) in /home/ugacsaco/public_html/check.php on line 2
+[10-Jun-2014 09:46:48 America/Chicago] PHP Parse error:  syntax error, unexpected 'INFO' (T_STRING) in /home/ugacsaco/public_html/check.php on line 2
+[10-Jun-2014 10:16:16 America/Chicago] PHP Parse error:  syntax error, unexpected 'INFO' (T_STRING) in /home/ugacsaco/public_html/check.php on line 2
+[14-Sep-2014 22:55:23 America/Chicago] PHP Parse error:  syntax error, unexpected '=', expecting ';' in /home/ugacsaco/public_html/home.php on line 392
+[14-Sep-2014 22:55:31 America/Chicago] PHP Parse error:  syntax error, unexpected '=', expecting ';' in /home/ugacsaco/public_html/home.php on line 392
+[14-Sep-2014 22:56:08 America/Chicago] PHP Parse error:  syntax error, unexpected '=', expecting ';' in /home/ugacsaco/public_html/home.php on line 392
+[14-Sep-2014 22:57:02 America/Chicago] PHP Parse error:  syntax error, unexpected '=', expecting ';' in /home/ugacsaco/public_html/home.php on line 392
+[14-Sep-2014 22:58:47 America/Chicago] PHP Parse error:  syntax error, unexpected '=', expecting ';' in /home/ugacsaco/public_html/home.php on line 392
+[14-Sep-2014 23:03:24 America/Chicago] PHP Parse error:  syntax error, unexpected 'else' (T_ELSE) in /home/ugacsaco/public_html/home.php on line 397
+[14-Sep-2014 23:04:19 America/Chicago] PHP Parse error:  syntax error, unexpected 'else' (T_ELSE) in /home/ugacsaco/public_html/home.php on line 397
+[14-Sep-2014 23:04:22 America/Chicago] PHP Parse error:  syntax error, unexpected 'else' (T_ELSE) in /home/ugacsaco/public_html/home.php on line 397
+[14-Sep-2014 23:12:00 America/Chicago] PHP Fatal error:  Cannot use [] for reading in /home/ugacsaco/public_html/home.php on line 397
+[14-Sep-2014 23:12:03 America/Chicago] PHP Fatal error:  Cannot use [] for reading in /home/ugacsaco/public_html/home.php on line 397
+[17-Sep-2014 14:31:42 America/Chicago] PHP Warning:  mysql_fetch_assoc() expects parameter 1 to be resource, boolean given in /home/ugacsaco/public_html/newsDescription.php on line 10
+[17-Sep-2014 14:31:55 America/Chicago] PHP Warning:  mysql_fetch_assoc() expects parameter 1 to be resource, boolean given in /home/ugacsaco/public_html/newsDescription.php on line 10
+[17-Sep-2014 14:32:22 America/Chicago] PHP Warning:  mysql_fetch_assoc() expects parameter 1 to be resource, boolean given in /home/ugacsaco/public_html/newsDescription.php on line 10
+[17-Sep-2014 14:32:28 America/Chicago] PHP Warning:  Illegal string offset 'title' in /home/ugacsaco/public_html/newsDescription.php on line 61
+[17-Sep-2014 14:32:28 America/Chicago] PHP Warning:  Illegal string offset 'description' in /home/ugacsaco/public_html/newsDescription.php on line 62
+[17-Sep-2014 14:32:28 America/Chicago] PHP Warning:  Illegal string offset 'title' in /home/ugacsaco/public_html/newsDescription.php on line 61
+[17-Sep-2014 14:32:28 America/Chicago] PHP Warning:  Illegal string offset 'description' in /home/ugacsaco/public_html/newsDescription.php on line 62
+[17-Sep-2014 14:32:28 America/Chicago] PHP Warning:  Illegal string offset 'title' in /home/ugacsaco/public_html/newsDescription.php on line 61
+[17-Sep-2014 14:32:28 America/Chicago] PHP Warning:  Illegal string offset 'description' in /home/ugacsaco/public_html/newsDescription.php on line 62
+[17-Sep-2014 14:32:28 America/Chicago] PHP Warning:  Illegal string offset 'title' in /home/ugacsaco/public_html/newsDescription.php on line 61
+[17-Sep-2014 14:32:28 America/Chicago] PHP Warning:  Illegal string offset 'description' in /home/ugacsaco/public_html/newsDescription.php on line 62
+[17-Sep-2014 14:32:28 America/Chicago] PHP Warning:  Illegal string offset 'title' in /home/ugacsaco/public_html/newsDescription.php on line 61
+[17-Sep-2014 14:32:28 America/Chicago] PHP Warning:  Illegal string offset 'description' in /home/ugacsaco/public_html/newsDescription.php on line 62
+[17-Sep-2014 14:32:28 America/Chicago] PHP Warning:  Illegal string offset 'title' in /home/ugacsaco/public_html/newsDescription.php on line 61
+[17-Sep-2014 14:32:28 America/Chicago] PHP Warning:  Illegal string offset 'description' in /home/ugacsaco/public_html/newsDescription.php on line 62
+[17-Sep-2014 14:32:55 America/Chicago] PHP Warning:  Illegal string offset 'title' in /home/ugacsaco/public_html/newsDescription.php on line 61
+[17-Sep-2014 14:32:55 America/Chicago] PHP Warning:  Illegal string offset 'description' in /home/ugacsaco/public_html/newsDescription.php on line 62
+[17-Sep-2014 14:32:55 America/Chicago] PHP Warning:  Illegal string offset 'title' in /home/ugacsaco/public_html/newsDescription.php on line 61
+[17-Sep-2014 14:32:55 America/Chicago] PHP Warning:  Illegal string offset 'description' in /home/ugacsaco/public_html/newsDescription.php on line 62
+[17-Sep-2014 14:32:55 America/Chicago] PHP Warning:  Illegal string offset 'title' in /home/ugacsaco/public_html/newsDescription.php on line 61
+[17-Sep-2014 14:32:55 America/Chicago] PHP Warning:  Illegal string offset 'description' in /home/ugacsaco/public_html/newsDescription.php on line 62
+[17-Sep-2014 14:32:55 America/Chicago] PHP Warning:  Illegal string offset 'title' in /home/ugacsaco/public_html/newsDescription.php on line 61
+[17-Sep-2014 14:32:55 America/Chicago] PHP Warning:  Illegal string offset 'description' in /home/ugacsaco/public_html/newsDescription.php on line 62
+[17-Sep-2014 14:32:55 America/Chicago] PHP Warning:  Illegal string offset 'title' in /home/ugacsaco/public_html/newsDescription.php on line 61
+[17-Sep-2014 14:32:55 America/Chicago] PHP Warning:  Illegal string offset 'description' in /home/ugacsaco/public_html/newsDescription.php on line 62
+[17-Sep-2014 14:32:55 America/Chicago] PHP Warning:  Illegal string offset 'title' in /home/ugacsaco/public_html/newsDescription.php on line 61
+[17-Sep-2014 14:32:55 America/Chicago] PHP Warning:  Illegal string offset 'description' in /home/ugacsaco/public_html/newsDescription.php on line 62
+[17-Sep-2014 14:33:07 America/Chicago] PHP Warning:  Illegal string offset 'title' in /home/ugacsaco/public_html/newsDescription.php on line 61
+[17-Sep-2014 14:33:07 America/Chicago] PHP Warning:  Illegal string offset 'description' in /home/ugacsaco/public_html/newsDescription.php on line 62
+[17-Sep-2014 14:33:07 America/Chicago] PHP Warning:  Illegal string offset 'title' in /home/ugacsaco/public_html/newsDescription.php on line 61
+[17-Sep-2014 14:33:07 America/Chicago] PHP Warning:  Illegal string offset 'description' in /home/ugacsaco/public_html/newsDescription.php on line 62
+[17-Sep-2014 14:33:07 America/Chicago] PHP Warning:  Illegal string offset 'title' in /home/ugacsaco/public_html/newsDescription.php on line 61
+[17-Sep-2014 14:33:07 America/Chicago] PHP Warning:  Illegal string offset 'description' in /home/ugacsaco/public_html/newsDescription.php on line 62
+[17-Sep-2014 14:33:07 America/Chicago] PHP Warning:  Illegal string offset 'title' in /home/ugacsaco/public_html/newsDescription.php on line 61
+[17-Sep-2014 14:33:07 America/Chicago] PHP Warning:  Illegal string offset 'description' in /home/ugacsaco/public_html/newsDescription.php on line 62
+[17-Sep-2014 14:33:07 America/Chicago] PHP Warning:  Illegal string offset 'title' in /home/ugacsaco/public_html/newsDescription.php on line 61
+[17-Sep-2014 14:33:07 America/Chicago] PHP Warning:  Illegal string offset 'description' in /home/ugacsaco/public_html/newsDescription.php on line 62
+[17-Sep-2014 14:33:07 America/Chicago] PHP Warning:  Illegal string offset 'title' in /home/ugacsaco/public_html/newsDescription.php on line 61
+[17-Sep-2014 14:33:07 America/Chicago] PHP Warning:  Illegal string offset 'description' in /home/ugacsaco/public_html/newsDescription.php on line 62
+[17-Sep-2014 14:35:05 America/Chicago] PHP Warning:  mysql_fetch_assoc() expects parameter 1 to be resource, null given in /home/ugacsaco/public_html/newsDescription.php on line 10
+[17-Sep-2014 14:35:08 America/Chicago] PHP Warning:  mysql_fetch_assoc() expects parameter 1 to be resource, null given in /home/ugacsaco/public_html/newsDescription.php on line 10
+[17-Sep-2014 14:35:11 America/Chicago] PHP Warning:  mysql_fetch_assoc() expects parameter 1 to be resource, null given in /home/ugacsaco/public_html/newsDescription.php on line 10
+[17-Sep-2014 14:35:13 America/Chicago] PHP Warning:  mysql_fetch_assoc() expects parameter 1 to be resource, null given in /home/ugacsaco/public_html/newsDescription.php on line 10
+[17-Sep-2014 14:35:15 America/Chicago] PHP Warning:  mysql_fetch_assoc() expects parameter 1 to be resource, null given in /home/ugacsaco/public_html/newsDescription.php on line 10
+[17-Sep-2014 14:35:51 America/Chicago] PHP Warning:  mysql_fetch_assoc() expects parameter 1 to be resource, null given in /home/ugacsaco/public_html/newsDescription.php on line 10
+[17-Sep-2014 14:36:50 America/Chicago] PHP Warning:  mysql_fetch_assoc() expects parameter 1 to be resource, null given in /home/ugacsaco/public_html/newsDescription.php on line 10
+[17-Sep-2014 14:36:55 America/Chicago] PHP Warning:  mysql_fetch_assoc() expects parameter 1 to be resource, null given in /home/ugacsaco/public_html/newsDescription.php on line 10
+[17-Sep-2014 14:36:57 America/Chicago] PHP Warning:  mysql_fetch_assoc() expects parameter 1 to be resource, null given in /home/ugacsaco/public_html/newsDescription.php on line 10
+[17-Sep-2014 14:36:59 America/Chicago] PHP Warning:  mysql_fetch_assoc() expects parameter 1 to be resource, null given in /home/ugacsaco/public_html/newsDescription.php on line 10
+[17-Sep-2014 14:41:12 America/Chicago] PHP Warning:  mysql_fetch_assoc() expects parameter 1 to be resource, null given in /home/ugacsaco/public_html/newsDescription.php on line 10
+[17-Sep-2014 14:42:31 America/Chicago] PHP Warning:  mysql_fetch_assoc() expects parameter 1 to be resource, boolean given in /home/ugacsaco/public_html/newsDescription.php on line 10
+[17-Sep-2014 14:42:31 America/Chicago] PHP Warning:  Illegal string offset 'title' in /home/ugacsaco/public_html/newsDescription.php on line 100
+[17-Sep-2014 14:42:31 America/Chicago] PHP Warning:  Illegal string offset 'description' in /home/ugacsaco/public_html/newsDescription.php on line 102
+[17-Sep-2014 14:42:33 America/Chicago] PHP Warning:  mysql_fetch_assoc() expects parameter 1 to be resource, boolean given in /home/ugacsaco/public_html/newsDescription.php on line 10
+[17-Sep-2014 14:42:33 America/Chicago] PHP Warning:  Illegal string offset 'title' in /home/ugacsaco/public_html/newsDescription.php on line 100
+[17-Sep-2014 14:42:33 America/Chicago] PHP Warning:  Illegal string offset 'description' in /home/ugacsaco/public_html/newsDescription.php on line 102
+[17-Sep-2014 14:42:36 America/Chicago] PHP Warning:  mysql_fetch_assoc() expects parameter 1 to be resource, boolean given in /home/ugacsaco/public_html/newsDescription.php on line 10
+[17-Sep-2014 14:42:36 America/Chicago] PHP Warning:  Illegal string offset 'title' in /home/ugacsaco/public_html/newsDescription.php on line 100
+[17-Sep-2014 14:42:36 America/Chicago] PHP Warning:  Illegal string offset 'description' in /home/ugacsaco/public_html/newsDescription.php on line 102
+[17-Sep-2014 14:42:36 America/Chicago] PHP Warning:  mysql_fetch_assoc() expects parameter 1 to be resource, boolean given in /home/ugacsaco/public_html/newsDescription.php on line 10
+[17-Sep-2014 14:42:36 America/Chicago] PHP Warning:  Illegal string offset 'title' in /home/ugacsaco/public_html/newsDescription.php on line 100
+[17-Sep-2014 14:42:36 America/Chicago] PHP Warning:  Illegal string offset 'description' in /home/ugacsaco/public_html/newsDescription.php on line 102
+[17-Sep-2014 14:42:39 America/Chicago] PHP Warning:  mysql_fetch_assoc() expects parameter 1 to be resource, boolean given in /home/ugacsaco/public_html/newsDescription.php on line 10
+[17-Sep-2014 14:42:39 America/Chicago] PHP Warning:  Illegal string offset 'title' in /home/ugacsaco/public_html/newsDescription.php on line 100
+[17-Sep-2014 14:42:39 America/Chicago] PHP Warning:  Illegal string offset 'description' in /home/ugacsaco/public_html/newsDescription.php on line 102
+[17-Sep-2014 14:43:07 America/Chicago] PHP Warning:  mysql_fetch_assoc() expects parameter 1 to be resource, boolean given in /home/ugacsaco/public_html/newsDescription.php on line 10
+[17-Sep-2014 15:04:07 America/Chicago] PHP Warning:  mysql_fetch_assoc() expects parameter 1 to be resource, boolean given in /home/ugacsaco/public_html/newsDetail.php on line 10
+[17-Sep-2014 15:04:27 America/Chicago] PHP Warning:  mysql_fetch_assoc() expects parameter 1 to be resource, boolean given in /home/ugacsaco/public_html/newsDetail.php on line 10
+[17-Sep-2014 15:08:59 America/Chicago] PHP Warning:  mysql_fetch_assoc() expects parameter 1 to be resource, boolean given in /home/ugacsaco/public_html/newsDetail.php on line 10
+[20-Sep-2014 19:42:20 America/Chicago] PHP Warning:  mysql_fetch_assoc() expects parameter 1 to be resource, boolean given in /home/ugacsaco/public_html/newsDetail.php on line 10
+[21-Sep-2014 22:07:12 America/Chicago] PHP Warning:  mysql_fetch_assoc() expects parameter 1 to be resource, boolean given in /home/ugacsaco/public_html/newsDetail.php on line 10
