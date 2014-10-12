@@ -3,7 +3,7 @@
 	
 	$id = $_GET['id'];
 	
-	$sql = "select * from Links Where id=2";
+	$sql = "select * from Links Where id=$id";
 	
 
 	$query = mysql_query($sql);

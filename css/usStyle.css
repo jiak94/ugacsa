@@ -137,13 +137,13 @@ input[id=searchBox] {
 	height: 60px;
 }
 
-ul
+.menu ul
 {
 	background-image: url(img/cloud.png);
 	list-style-type: none;
 	display: inline;
 }
-li
+.menu li
 {
 	font-family: Calibri;
 	float: left;
@@ -157,7 +157,7 @@ li
 .content
 {
 	width: auto;
-	height: auto;
+	min-height: 500px;
 	padding-top: 30px;
 	padding-right: 0px;
 	padding-left: 0px;
@@ -201,7 +201,7 @@ a[id=aboutUs]
 	color: white;
 }
 
-div[id=contact], div[id=join]
+div[id=contact], div[id=join], div[id=constitution], div[id=committee]
 {
 	width: 250px;
 	height: auto;
@@ -210,8 +210,8 @@ div[id=contact], div[id=join]
 }
 .newsSubscriber
 {
-	position: absolute;
-	top: 950px;
+	position: relative;
+	top: 600px;
 
 }
 
@@ -240,7 +240,7 @@ input[id=submit]
 .rightPart
 {
 	width: 535px;
-	height: 900px;
+	min-height: 900px;
 	padding-left: 20px;
 	padding-right: 0px;
 	padding-top: 10px;

@@ -19,6 +19,7 @@
 	<meta charset="utf-8">
 </head>
 <body>
+
 <div style="float:right">
 <strong>当前用户: <?php echo $currentUser; ?></strong>
 <br>
@@ -66,7 +67,7 @@
 	<tr>
 		<td>&nbsp;<?php echo $value['title']; ?></td>
 		<td>&nbsp;<?php echo $value['author']; ?></td>
-		<td>&nbsp;<a href="article.del.handle.php?id= <?php echo $value['id'];?>">删除 &nbsp;
+		<td>&nbsp;<a href="article.del.handle.php?id= <?php echo $value['id'];?>">删除</a> &nbsp;
 		<a href="article.modify.php?id=<?php echo $value['id'];?>">修改</a>
 		</td>
 	</tr>
@@ -117,7 +118,7 @@
 		<td>&nbsp;<?php echo $eventValue['holder']; ?></td>
 		<td>&nbsp;<?php echo $eventValue['place']; ?></td>
 		<td>&nbsp;<?php echo $eventValue['date']; ?></td>
-		<td>&nbsp;<a href="event.del.handle.php?id= <?php echo $eventValue['id'];?>">删除 &nbsp;
+		<td>&nbsp;<a href="event.del.handle.php?id= <?php echo $eventValue['id'];?>">删除</a> &nbsp;
 		<a href="event.modify.php?id=<?php echo $eventValue['id'];?>">修改</a>
 		</td>
 
@@ -177,7 +178,7 @@
 				echo "其他";
 			}
 		?></td>
-		<td>&nbsp;<a href="link.del.handle.php?id=<?php echo $linkValue['id']; ?>">删除 &nbsp;
+		<td>&nbsp;<a href="link.del.handle.php?id=<?php echo $linkValue['id']; ?>">删除</a> &nbsp;
 		<a href="link.modify.php?id=<?php echo $linkValue['id'] ?>">修改</a>
 		</td>
 	</tr>

@@ -64,9 +64,9 @@ $(document).ready(function() {
 		<li><a href="news.php"><span>新闻<br/>News</span></a></li>
 		<li class="active"><a href="events.php"><span>活动<br/>Events</span></a></li>
 		<li><a href="us.php"><span>我们<br/>Us</span></a></li>
-		<li><a href="guide.htm"><span>指南<br/>Guide</span></a></li>
-		<li><a href="cooperation.ht"><span>合作<br/>Cooperation</span></a></li>
-		<li><a href="http://bbs.ugacsa.com"><span>论坛<br/>BBS</span></a></li>
+		<li><a href="guide.php"><span>指南<br/>Guide</span></a></li>
+		<li><a href="cooperation.php"><span>合作<br/>Cooperation</span></a></li>
+		<li><a href="http://bbs.ugacsa.com" target="_blank"><span>论坛<br/>BBS</span></a></li>
 	</ul>		
 	</div>
 </div>
@@ -108,9 +108,9 @@ $(document).ready(function() {
 
 		<div class="newsSubscriber">
 			<div class="snsIcon">
-				<a href="#" target="_blank"><img src="img/fb.gif" /></a>
-				<a href="#" target="_blank"><img src="img/renren.png" /></a>
-				<a href="#" target="_blank"><img src="img/weibo.png" /></a>
+				<a href="https://www.facebook.com/csaATUGA" target="_blank"><img src="img/fb.gif" /></a>
+				<a href="http://page.renren.com/670000616?checked=true" target="_blank"><img src="img/renren.png" /></a>
+				<a href="http://weibo.com/u/3212988263" target="_blank"><img src="img/weibo.png" /></a>
 			</div>
 		
 			<form action="subscribe.php" method="POST">
@@ -121,13 +121,14 @@ $(document).ready(function() {
 		</div>
 	</div>
 	<div class="eventsDetail">
-		<div class="eventsTitlePic">
-			<img src="img/arch-at-night.jpg" />
-		</div>
 		<div class="eventsDetailContent">
-				<h1 align="center">学生会活动中心</h1>
+				<h1 align="center" style="font-family: chinese">学生会活动公告中心</h1>
 				
 		</div>
+		<div class="eventsTitlePic">
+			<img src="img/arch-at-night.jpg" style="width:530px;" />
+		</div>
+		
 	</div>
 	</div>
 </div>
@@ -135,7 +136,7 @@ $(document).ready(function() {
 <div class="footer">
 	<div class="sns">
 		<div class="sns_resize" align="center">
-			<strong  id="snsText">Contact us on <a href="#" target="_blank">Facebook</a>, <a href="#" target="_blank">Twitter</a>, and <a href="#" target="_blank">Weibo</a></strong>
+			<strong  id="snsText">Contact us on <a href="https://www.facebook.com/csaATUGA" target="_blank">Facebook</a>, <a href="#" target="_blank">Twitter</a>, and <a href="http://weibo.com/u/3212988263" target="_blank">Weibo</a></strong>
 		</div>	
 	</div>
 	<div class="address">

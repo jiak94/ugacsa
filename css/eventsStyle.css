@@ -202,8 +202,8 @@ li
 
 .newsSubscriber
 {
-	position: absolute;
-	top: 950px;
+	position: relative;
+	top: 600px;
 
 }
 .snsIcon
@@ -224,7 +224,7 @@ input[id=submit]
 .eventsDetail
 {
 	width: 535px;
-	height: 900px;
+	min-height: 900px;
 	padding-left: 20px;
 	padding-right: 0px;
 	padding-top: 10px;
@@ -236,8 +236,8 @@ input[id=submit]
 }
 .eventsTitlePic
 {
-	width: 530px;
-	height: 100px;
+	width: 500px;
+	
 }
 .eventsDetailContent
 {

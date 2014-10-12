@@ -33,19 +33,19 @@
 	<table>
 	<tr>
 		<td>标题</td>
-		<td><input name="title" id="title" placeholder="标题"></td>
+		<td><input name="title" id="title" placeholder="标题" required="true"></td>
 	</tr>
 	<tr>
 		<td>举办方</td>
-		<td><input name="holder" id="holder" placehoder="举办方"></td>
+		<td><input name="holder" id="holder" placehoder="举办方" required="true"></td>
 	</tr>
 	<tr>
 		<td>地点</td>
-		<td><input name="place" id="place" placehoder="地点"></td>
+		<td><input name="place" id="place" placehoder="地点" required="true"></td>
 	</tr>
 	<tr>
 		<td>时间</td>
-		<td><input name="date" id="date" placehoder="时间"></td>
+		<td><input name="date" id="date" placehoder="时间" required="true"></td>
 	</tr>
 	<tr>
 		<td>内容</td>

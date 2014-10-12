@@ -217,7 +217,7 @@ input[id=submit]
 .rightPart
 {
 	width: 535px;
-	height: 900px;
+	height: auto;
 	padding-left: 20px;
 	padding-right: 0px;
 	padding-top: 10px;

@@ -41,13 +41,15 @@
 		<td>标题</td>
 		<td><input name="title" id="title" placehoder="标题"></td>
 	</tr>
+	<!--
 	<tr>
 		<td>简介</td>
-		<td><textarea name="description" id="description" placehoder="大纲" cols="60" rows="5"></textarea></td>
+		<script id="editor1" name="description" type="text/plain" style="width:500px;height:300px;"></script>
 	</tr>
+	-->
 	<tr>
 		<td>正文</td>
-		<script id="editor" name="content" type="text/plain" style="width:800px;height:500px;"></script>
+		<script id="editor" name="content" type="text/plain" style="width:1000px;height:500px;"></script>
 	</tr>
 	<tr>
 		<td><input type="submit" name="button" id="button" value="提交"></td>
@@ -60,8 +62,9 @@
 
     //实例化编辑器
     //建议使用工厂方法getEditor创建和引用编辑器实例，如果在某个闭包下引用该编辑器，直接调用UE.getEditor('editor')就能拿到相关的实例
+    //var ue = UE.getEditor('editor1');
     var ue = UE.getEditor('editor');
-
+	
 
     </script>
 

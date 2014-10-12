@@ -1,18 +1,7 @@
-<?php
-	require_once("connect.php");
-		
-	$id = $_GET['id'];
-	
-	$sql = "select * from Article WHERE id=$id";
-	
-	$query = mysql_query($sql);
-	
-	$data = mysql_fetch_assoc($query);
-?>
 <!DOCTYPE html>
 <html>
 <head>
-	<title>新闻中心 | 详情 |<?php echo $data['title']; ?></title>
+	<title>乔治亚大学中国学生学者联合会 | 主页</title>
 	<meta http-equiv="Content-Type" content="text/html; charset = UTF-8"/>
     <link rel="stylesheet" type="text/css" href="css/usStyle.css">
 </head>
@@ -36,28 +25,20 @@
 	<div class="menu_nav_resize" align="Center">
 	<ul>
 		<li><a href="home.php"><span>主页<br/>Home</span></a></li>
-		<li class="active"><a href="news.php"><span>新闻<br/>News</span></a></li>
+		<li><a href="news.php"><span>新闻<br/>News</span></a></li>
 		<li><a href="events.php"><span>活动<br/>Events</span></a></li>
 		<li><a href="us.php"><span>我们<br/>Us</span></a></li>
 		<li><a href="guide.php"><span>指南<br/>Guide</span></a></li>
-		<li><a href="cooperation.php"><span>合作<br/>Cooperation</span></a></li>
-		<li><a href="http://bbs.ugacsa.com"><span>论坛<br/>BBS</span></a></li>
+		<li class="active"><a href="cooperation.php"><span>合作<br/>Cooperation</span></a></li>
+		<li><a href="http://bbs.ugacsa.com" target="_blank"><span>论坛<br/>BBS</span></a></li>
 	</ul>		
 	</div>
 </div>
 
 <div class="content">
-	<a href="news.php" style="position: relative; left: 150px;text-decoration: underline;">&lt;返回</a>
-
-	<div class="content_resize">
-	<h1 align="center"><?php echo $data['title']; ?></h1>
-	<div class="authorDate" align="center">
-	<strong style="font-size: 14px;"><?php echo $data['author']; ?></strong>
-	<strong style="font-size: 14px;"><?php echo date("Y-m-d", $data['dateline']); ?></strong>
+	<div style="width:1200px;margin-right:auto;margin-left:auto;">
+	<img src="cooperationAds/Fooksfood.jpg" style="width:1200px;" />
 	</div>
-
-	<?php echo $data['content']; ?>
-
 </div>
 
 <div class="footer">

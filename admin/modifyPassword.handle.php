@@ -43,12 +43,13 @@
 		
 		$message = "You just update your password for Username: ".$username." to ".$newPassword;
 		$hashNew = hash('md5', $newPassword);
-		echo("done");
+		//echo($hashNew);
+		//echo("done");
 		
 		$sqlUpdate = "UPDATE Admin SET Password='$hashNew' WHERE Username='$username'";
 		
 		
-		$queryUpdate = mysql_query($queryUpdate);
+		$queryUpdate = mysql_query($sqlUpdate);
 		
 		mail($to, $subject, $message);
 			

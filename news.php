@@ -8,8 +8,10 @@
 	if($query&& mysql_num_rows($query)){
 		while ($row = mysql_fetch_assoc($query)){
 			$data[] = $row;
+			$defaultContent[] = $row;
 		}
 	}
+	$count = 0;
 ?>
 <!DOCTYPE html>
 <html>
@@ -64,9 +66,9 @@ $(document).ready(function() {
 		<li class="active"><a href="news.php"><span>新闻<br/>News</span></a></li>
 		<li><a href="events.php"><span>活动<br/>Events</span></a></li>
 		<li><a href="us.php"><span>我们<br/>Us</span></a></li>
-		<li><a href="#"><span>指南<br/>Guide</span></a></li>
-		<li><a href="#"><span>合作<br/>Cooperation</span></a></li>
-		<li><a href="http://bbs.ugacsa.com"><span>论坛<br/>BBS</span></a></li>
+		<li><a href="guide.php"><span>指南<br/>Guide</span></a></li>
+		<li><a href="cooperation.php"><span>合作<br/>Cooperation</span></a></li>
+		<li><a href="http://bbs.ugacsa.com" target="_blank"><span>论坛<br/>BBS</span></a></li>
 	</ul>		
 	</div>
 </div>
@@ -112,9 +114,9 @@ $(document).ready(function() {
 			
 		<div class="newsSubscriber">
 			<div class="snsIcon">
-				<a href="#" target="_blank"><img src="img/fb.gif" /></a>
-				<a href="#" target="_blank"><img src="img/renren.png" /></a>
-				<a href="#" target="_blank"><img src="img/weibo.png" /></a>
+				<a href="https://www.facebook.com/csaATUGA" target="_blank"><img src="img/fb.gif" /></a>
+				<a href="http://page.renren.com/670000616?checked=true" target="_blank"><img src="img/renren.png" /></a>
+				<a href="http://weibo.com/u/3212988263" target="_blank"><img src="img/weibo.png" /></a>
 			</div>
 		
 			<form action="subscribe.php" method="POST">
@@ -125,12 +127,27 @@ $(document).ready(function() {
 		</div>
 	</div>
 	<div class="rightPart">
-		<div class="rightPartTitlePic">
-			<img style="width:530px; height:auto;" src="img/usPic.jpg" />
-		</div>
-		<div class="rightPartDetailContent">
-			<h1>这里是新闻中文,写死的,重新设计一下排版</h1>
+		<div style="width:535px; height: auto;">
+			<?php 
+			if(!empty($defaultContent)){
+				foreach($defaultContent as $defaultValue){
+			?>
+				<h1 align="center"><?PHP echo $defaultValue['title']; ?></h1>
+				<!--
+				<?php echo $dataDescription['description']; ?>
+				-->
+				<?php echo $defaultValue['content'];?>
+			<?php
+				$count++;
 				
+				if($count==1){
+					break;
+				}
+			}
+			}
+			
+			?>
+		<!--/div-->
 		</div>
 	</div>
 	</div>
@@ -139,7 +156,7 @@ $(document).ready(function() {
 <div class="footer">
 	<div class="sns">
 		<div class="sns_resize" align="center">
-			<strong  id="snsText">Contact us on <a href="#" target="_blank">Facebook</a>, <a href="#" target="_blank">Twitter</a>, and <a href="#" target="_blank">Weibo</a></strong>
+			<strong  id="snsText">Contact us on <a href="https://www.facebook.com/csaATUGA" target="_blank">Facebook</a>, <a href="#" target="_blank">Twitter</a>, and <a href="http://weibo.com/u/3212988263" target="_blank">Weibo</a></strong>
 		</div>	
 	</div>
 	<div class="address">

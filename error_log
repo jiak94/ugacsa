@@ -99,3 +99,15 @@
 [17-Sep-2014 15:08:59 America/Chicago] PHP Warning:  mysql_fetch_assoc() expects parameter 1 to be resource, boolean given in /home/ugacsaco/public_html/newsDetail.php on line 10
 [20-Sep-2014 19:42:20 America/Chicago] PHP Warning:  mysql_fetch_assoc() expects parameter 1 to be resource, boolean given in /home/ugacsaco/public_html/newsDetail.php on line 10
 [21-Sep-2014 22:07:12 America/Chicago] PHP Warning:  mysql_fetch_assoc() expects parameter 1 to be resource, boolean given in /home/ugacsaco/public_html/newsDetail.php on line 10
+[29-Sep-2014 04:14:01 America/Chicago] PHP Warning:  mysql_fetch_assoc() expects parameter 1 to be resource, boolean given in /home/ugacsaco/public_html/newsDetail.php on line 10
+[02-Oct-2014 19:18:55 America/Chicago] PHP Warning:  mysql_fetch_assoc() expects parameter 1 to be resource, boolean given in /home/ugacsaco/public_html/newsDetail.php on line 10
+[05-Oct-2014 14:47:51 America/Chicago] PHP Parse error:  syntax error, unexpected '$linkSql' (T_VARIABLE) in /home/ugacsaco/public_html/guide.php on line 4
+[05-Oct-2014 14:49:13 America/Chicago] PHP Parse error:  syntax error, unexpected '$linkSql' (T_VARIABLE) in /home/ugacsaco/public_html/guide.php on line 4
+[05-Oct-2014 14:49:15 America/Chicago] PHP Parse error:  syntax error, unexpected '$linkSql' (T_VARIABLE) in /home/ugacsaco/public_html/guide.php on line 4
+[05-Oct-2014 14:49:37 America/Chicago] PHP Parse error:  syntax error, unexpected '$linkSql' (T_VARIABLE) in /home/ugacsaco/public_html/guide.php on line 4
+[05-Oct-2014 22:54:24 America/Chicago] PHP Warning:  mysql_fetch_assoc() expects parameter 1 to be resource, boolean given in /home/ugacsaco/public_html/newsDetail.php on line 10
+[12-Oct-2014 15:48:06 America/Chicago] PHP Parse error:  syntax error, unexpected '++' (T_INC) in /home/ugacsaco/public_html/news.php on line 139
+[12-Oct-2014 15:48:46 America/Chicago] PHP Parse error:  syntax error, unexpected '++' (T_INC) in /home/ugacsaco/public_html/news.php on line 139
+[12-Oct-2014 15:48:48 America/Chicago] PHP Parse error:  syntax error, unexpected '++' (T_INC) in /home/ugacsaco/public_html/news.php on line 139
+[12-Oct-2014 15:50:14 America/Chicago] PHP Parse error:  syntax error, unexpected '++' (T_INC) in /home/ugacsaco/public_html/news.php on line 140
+[12-Oct-2014 15:52:38 America/Chicago] PHP Parse error:  syntax error, unexpected '++' (T_INC) in /home/ugacsaco/public_html/news.php on line 141

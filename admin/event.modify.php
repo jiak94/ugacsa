@@ -38,19 +38,19 @@
 	<input type="hidden" name="id" value="<?php  echo $data['id']; ?>" >
 	<tr>
 		<td>标题</td>
-		<td><input id="title" name="title" value="<?php echo($data['title']); ?>"></td>
+		<td><input id="title" name="title" value="<?php echo($data['title']); ?>" required="true"></td>
 	</tr>
 	<tr>
 		<td>作者</td>
-		<td><input name="holder" id="holder" value="<?php echo($data['holder']); ?>"></td>
+		<td><input name="holder" id="holder" value="<?php echo($data['holder']); ?>" required="true"></td>
 	</tr>
 	<tr>
-		<td>标题</td>
-		<td><input name="place" id="place" value="<?php echo $data['place']; ?>"></td>
+		<td>地点</td>
+		<td><input name="place" id="place" value="<?php echo $data['place']; ?>" required="true" style="width: 200px" ></td>
 	</tr>
 	<tr>
 		<td>时间</td>
-		<td><textarea name="date" id="date" cols="60" rows="5"><?php echo $data['date']; ?></textarea></td>
+		<td><input name="date" id="date" value="<?php echo $data['date']; ?>" required="true"></td>
 	</tr>
 	<tr>
 		<td>正文</td>

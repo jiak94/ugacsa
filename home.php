@@ -9,6 +9,14 @@
 		}
 	}
 	
+	$linkSql = "SELECT * FROM Links";
+	$linkQuery = mysql_query($linkSql);
+	$linkCount = 0;
+	if ($linkQuery && mysql_num_rows($linkQuery)){
+		while($linkRow = mysql_fetch_assoc($linkQuery)){
+			$linkData[]= $linkRow;
+		}
+	}
 ?>
 <!DOCTYPE html>
 <html>
@@ -41,9 +49,9 @@
 		<li><a href="news.php"><span>新闻<br/>News</span></a></li>
 		<li><a href="events.php"><span>活动<br/>Events</span></a></li>
 		<li><a href="us.php"><span>我们<br/>Us</span></a></li>
-		<li><a href="#"><span>指南<br/>Guide</span></a></li>
-		<li><a href="#"><span>合作<br/>Cooperation</span></a></li>
-		<li><a href="http://bbs.ugacsa.com"><span>论坛<br/>BBS</span></a></li>
+		<li><a href="guide.php"><span>指南<br/>Guide</span></a></li>
+		<li><a href="cooperation.php"><span>合作<br/>Cooperation</span></a></li>
+		<li><a href="http://bbs.ugacsa.com" target="_blank"><span>论坛<br/>BBS</span></a></li>
 	</ul>		
 	</div>
 </div>
@@ -399,7 +407,7 @@
 		?>
 		<div class="newsContent" id="newsLast">
 			<br>
-			<a href="newsDetail.php?id=<?php echo $value['id']; ?>" style="margin-left:50px;"><? echo($value["title"]); ?></a>
+			<a href="newsDescription.php?id=<?php echo $value['id']; ?>" style="margin-left:50px;"><? echo($value["title"]); ?></a>
 		</div>
 		<? 
 			break;
@@ -407,7 +415,7 @@
 		?>
 		<div class="newsContent" >
 			<br>
-			<a href="newsDetail.php?id=<?php echo $value['id']; ?>" style="margin-left:50px;"><?php echo($value["title"]); ?></a>
+			<a href="newsDescription.php?id=<?php echo $value['id']; ?>" style="margin-left:50px;"><?php echo($value["title"]); ?></a>
 		</div>
 		<?php
 				}
@@ -451,25 +459,36 @@
 	<div class="link">
 		<div class="banner"></div>
 		<div class="linkTitle">
-			<strong>Link</strong>
-			<a href="#link">More</a>
+			<strong>Resources</strong>
+			<a href="guide.php">More</a>
 		</div>
-		<div class="linkContent">
-		
-		</div>
-		<div class="linkContent">
-		
-		</div>
-		<div class="linkContent">
-		
-		</div>
-		<div class="linkContent">
-		
-		</div>
-		<div class="linkContent">
-		
-		</div>
+		<?php
+			if(empty($linkData)){
+				echo("当前没有信息");
+			}
+			else{
+				foreach($linkData as $linkValue){
+				$linkCount++;
+				if($linkCount==6){
+		?>
 		<div class="linkContent" id="linkLast">
+			<br>
+			<a href="<?php echo $linkValue['link']; ?>" target="_blank" style="margin-left:50px;"><? echo($linkValue["title"]); ?></a>
+		</div>
+		<? 
+			break;
+			}
+		?>
+		<div class="linkContent" >
+			<br>
+			<a href="<?php echo $linkValue['link']; ?>" target="_blank" style="margin-left:50px;"><?php echo($linkValue["title"]); ?></a>
+		</div>
+		<?php
+				}
+			}
+		?>
+						
+		<div class="newsContent" id="newsLast">
 		
 		</div>
 	</div>	
@@ -477,13 +496,13 @@
 
 <div class="snsICON" style="margin-top:5px;">
 	<div class="weibo">
-		<a href="#"><img src="img/weibo.png" id="weibo" /></a>
+		<a href="http://weibo.com/u/3212988263" target="_blank"><img src="img/weibo.png" /></a>
 	</div>
 	<div class="facebook">
-		<a href="#"><img src="img/fb.gif" id="facebook" /></a>
+		<a href="https://www.facebook.com/csaATUGA" target="_blank"><img src="img/fb.gif" /></a>
 	</div>
 	<div class="renren">
-		<a href="#"><img src="img/renren.png" id="renren" /></a>
+		<a href="http://page.renren.com/670000616?checked=true" target="_blank"><img src="img/renren.png" /></a>
 	</div>
 </div>
 </div>
@@ -491,7 +510,7 @@
 <div class="footer">
 	<div class="sns">
 		<div class="sns_resize" align="center">
-			<strong  id="snsText">Contact us on <a href="#" target="_blank">Facebook</a>, <a href="#" target="_blank">Twitter</a>, and <a href="#" target="_blank">Weibo</a></strong>
+			<strong  id="snsText">Contact us on <a href="https://www.facebook.com/csaATUGA" target="_blank">Facebook</a>, <a href="#" target="_blank">Twitter</a>, and <a href="http://weibo.com/u/3212988263" target="_blank">Weibo</a></strong>
 		</div>	
 	</div>
 	<div class="address">
