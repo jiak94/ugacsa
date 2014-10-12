@@ -7,8 +7,10 @@
 	if ($query&&mysql_num_rows($query)){
 		while($row = mysql_fetch_assoc($query)){
 			$data[]=$row;
+			$defaultContent[] = $row;
 		}
 	}
+	$count = 0;
 
 ?>
 <!DOCTYPE html>
@@ -122,13 +124,27 @@ $(document).ready(function() {
 	</div>
 	<div class="eventsDetail">
 		<div class="eventsDetailContent">
-				<h1 align="center" style="font-family: chinese">学生会活动公告中心</h1>
-				
-		</div>
-		<div class="eventsTitlePic">
-			<img src="img/arch-at-night.jpg" style="width:530px;" />
-		</div>
-		
+		<?php
+			if(!empty($defaultContent)){
+			foreach($defaultContent as $defaultValue){
+		?>
+				<strong><?php echo $defaultValue['title']; ?></strong>
+				<br/>
+				<strong>日期: <?php echo $defaultValue['date']; ?></strong>
+				<br />
+				<strong>主办者: <?php echo $defaultValue['holder']; ?>
+				<br />
+				<strong>地点: <?php echo $defaultValue['place']; ?></strong>
+				<p style="font-size:14px; line-height:21px;"><?php echo $defaultValue['detail']; ?></p>
+		<?php
+			$count++;
+			if($count ==1){
+				break;
+			}
+		}
+		}
+		?>
+		</div>		
 	</div>
 	</div>
 </div>
