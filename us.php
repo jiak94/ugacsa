@@ -13,7 +13,7 @@
 	<h1 id="CHNtitle" style="font-family: chinese">佐治亚大学中国学生学者联谊会</h1>
 	<h2 id="ENGtitle">CHINESE STUDENT ASSOCIATION AT THE UNIVERSITY OF GEORGIA</h2>
 
-	<form action="http://www.google.com/search" method="get" target="_blank">
+	<form action="http://www.google.com/search" method="get" target="_blank" id="search">
 		<input name="sitesearch" value="ugacsa.com/*" type="hidden">
 		<input name="hl" value="zh-CN" type="hidden">
 		<input name="ie" value="UTF-8" type="hidden">
@@ -130,17 +130,18 @@
 				</script>	
 		</div>
 		<div class="newsSubscriber">
-			<div class="snsIcon">
+            <div class="subscribeForm">
+                <form action="subscribe.php" method="POST" style="margin: 0px; padding: 0px;">
+                    <input id="subscriber" />
+                    <input id="submit" type="submit" value="Subcribe!" />
+                </form>
+            </div>
+            <div class="snsIcon">
 				<a href="https://www.facebook.com/csaATUGA" target="_blank"><img src="assets/img/fb.gif" /></a>
 				<a href="http://page.renren.com/670000616?checked=true" target="_blank"><img src="assets/img/renren.png" /></a>
 				<a href="http://weibo.com/u/3212988263" target="_blank"><img src="assets/img/weibo.png" /></a>
 			</div>
-		
-			<form action="subscribe.php" method="POST">
-				<input id="subscriber" />
-				<input id="submit" type="submit" value="SUBMIT" />
-			</form>
-			
+
 		</div>
 	</div>
 	<div class="rightPart">
