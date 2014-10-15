@@ -1,8 +1,5 @@
-@charset "UFT-16";
-@font-face{
-	font-family: 'libian';
-	src: url('assets/font/libian.TTF');
-}
+@charset "UFT-8";
+
 h1 {color: white; font: normal 30px/1.2em}
 
 

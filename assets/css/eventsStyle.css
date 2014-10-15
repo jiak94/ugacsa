@@ -1,12 +1,12 @@
 @font-face
 {
-	font-family: 'chinese';
-	src: url('/assets/font/Chinese.TTF');
+    font-family: 'chinese';
+    src: url('../font/Chinese.TTF');
 }
 @font-face
 {
-	font-family: 'Calibri.ttf';
-	src: url('/assets/font/Calibri.ttf');
+    font-family: 'Calibri.ttf';
+    src: url('../font/Calibri.ttf');
 }
 
 body, html
