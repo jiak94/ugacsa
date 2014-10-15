@@ -7,8 +7,8 @@
 	$password = $_POST["password"];
 	$hashPassword = hash('md5', $password);
 	
-	
-	$sql = "select * from Admin";
+	//echo $username;
+	$sql = "select * from Admin WHERE Username = '$username'";
 	$query = mysql_query($sql);
 
 	
@@ -18,9 +18,13 @@
 			$data[] = $row;
 		}
 	}
-	
+
+
 	if(!empty($data)){
 		foreach($data as $value){
+            //echo $value['Username'];
+            //echo $value['Password'];
+            //echo $hashPassword;
 			if($value["Username"] === $username && $value["Password"]===$hashPassword){
 				
 				$_SESSION['login']= 1;
