@@ -23,7 +23,7 @@
 <head>
 	<title>管理员新闻发布系统</title>
 	<meta charset="utf-8" />
-	<script type="text/javascript" charset="utf-8" src="/app/ueditor/ueditor.config.js"></script>
+    <script type="text/javascript" charset="utf-8" src="/app/ueditor/ueditor.config.js"></script>
     <script type="text/javascript" charset="utf-8" src="/app/ueditor/ueditor.all.min.js"> </script>
     <style type="text/css">
         div{

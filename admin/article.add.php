@@ -21,7 +21,7 @@
 <head>
 	<title>管理员新闻发布系统</title>
 	<meta charset="utf-8" />
-	<script type="text/javascript" charset="utf-8" src="/app/ueditor/ueditor.config.js"></script>
+    <script type="text/javascript" charset="utf-8" src="/app/ueditor/ueditor.config.js"></script>
     <script type="text/javascript" charset="utf-8" src="/app/ueditor/ueditor.all.min.js"> </script>
     <style type="text/css">
         div{
@@ -49,7 +49,7 @@
 	-->
 	<tr>
 		<td>正文</td>
-		<script id="editor" name="content" type="text/plain" style="width:535px;"></script>
+		<script id="editor" name="content" type="text/plain" style="width:1000px;"></script>
 	</tr>
 	<tr>
 		<td><input type="submit" name="button" id="button" value="提交"></td>
