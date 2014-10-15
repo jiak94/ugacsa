@@ -111,3 +111,8 @@
 [12-Oct-2014 15:48:48 America/Chicago] PHP Parse error:  syntax error, unexpected '++' (T_INC) in /home/ugacsaco/public_html/news.php on line 139
 [12-Oct-2014 15:50:14 America/Chicago] PHP Parse error:  syntax error, unexpected '++' (T_INC) in /home/ugacsaco/public_html/news.php on line 140
 [12-Oct-2014 15:52:38 America/Chicago] PHP Parse error:  syntax error, unexpected '++' (T_INC) in /home/ugacsaco/public_html/news.php on line 141
+[12-Oct-2014 16:13:58 America/Chicago] PHP Warning:  Illegal string offset 'title' in /home/ugacsaco/public_html/events.php on line 131
+[12-Oct-2014 16:13:58 America/Chicago] PHP Warning:  Illegal string offset 'date' in /home/ugacsaco/public_html/events.php on line 133
+[12-Oct-2014 16:13:58 America/Chicago] PHP Warning:  Illegal string offset 'holder' in /home/ugacsaco/public_html/events.php on line 135
+[12-Oct-2014 16:13:58 America/Chicago] PHP Warning:  Illegal string offset 'place' in /home/ugacsaco/public_html/events.php on line 137
+[12-Oct-2014 16:13:58 America/Chicago] PHP Warning:  Illegal string offset 'detail' in /home/ugacsaco/public_html/events.php on line 138
