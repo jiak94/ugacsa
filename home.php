@@ -277,7 +277,7 @@
             <div style="filter: alpha(opacity=70); opacity:0.7; position: absolute; display: block;
                 background-color: #000; top: 0px; left: 0px;width: 100%;height:100%;">
             </div>
-            <div style="position: absolute; display: block; background: url(../img/loading.gif) no-repeat center center;
+            <div style="position: absolute; display: block; background: url(/assets/img/loading.gif) no-repeat center center;
                 top: 0px; left: 0px;width: 100%;height:100%;">
             </div>
         </div>
@@ -361,7 +361,7 @@
                 position: absolute;
                 cursor: pointer;
                 display: block;
-                background: url(img/a11.png) no-repeat;
+                background: url(/assets/img/a11.png) no-repeat;
                 overflow:hidden;
             }
             .jssora05l { background-position: -10px -40px; }
