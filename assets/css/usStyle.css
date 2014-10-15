@@ -149,7 +149,6 @@ input[id=searchBox] {
 /* Content */
 .content
 {
-	width: auto;
 	min-height: 500px;
 	padding-top: 30px;
 	padding-right: 0px;
