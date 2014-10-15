@@ -1,7 +1,7 @@
 <?php
 	require_once("connect.php");
 		
-	$sql = "select * from Article order by dateline desc";
+	$sql = "select * from Article order by id desc";
 	
 	$query = mysql_query($sql);
 	
@@ -37,7 +37,12 @@ $(document).ready(function() {
 		searching: false,
 		ordering: false,
 		"lengthMenu":[16],
-		"lengthChange": false
+		"lengthChange": false,
+        "columns":[
+            {"width": "70%"},
+            {"width": "15%"},
+            {"width": "15%"}
+        ]
 	});
 } );
 
@@ -51,8 +56,8 @@ $(document).ready(function() {
 	<h1 id="CHNtitle" style="font-family: chinese">佐治亚大学中国学生学者联谊会</h1>
 	<h2 id="ENGtitle">CHINESE STUDENT ASSOCIATION AT THE UNIVERSITY OF GEORGIA</h2>
 
-	<form action="http://www.google.com/search" method="get" target="_blank">
-		<input name="sitesearch" value="ugacsa.com/*" type="hidden">
+	<form action="http://www.google.com/search" method="get" target="_blank" id="search">
+		<input name="sitesearch" value="ugacsa.com" type="hidden">
 		<input name="hl" value="zh-CN" type="hidden">
 		<input name="ie" value="UTF-8" type="hidden">
 		<input onfocus="if( this.value=='Search CSA') {this.value='' };" size="25" name="q" id="searchBox" value="Search CSA" type="text">
@@ -78,40 +83,6 @@ $(document).ready(function() {
 	<div class="content_resize">
 	
 	<div class="leftPart">
-		
-			<div class="container">
-
-			
-			
-			<table id="example" class="display" cellspacing="0" width="100%">
-				<thead>
-					<tr>
-						<th>新闻</th>
-					</tr>
-				</thead>
-
-				<tfoot>
-					
-				</tfoot>
-
-				<tbody>
-					<?php 
-				if(!empty($data)){
-					foreach($data as $value){
-			?>
-			<tr><td><a href="newsDescription.php?id=<?php echo $value['id']; ?>"><?php echo $value['title']; ?></a></td></tr>
-			<?php
-					}
-				}
-			?>
-
-
-
-				</tbody>
-			</table>
-	</div>
-
-			
 		<div class="newsSubscriber">
 			<div class="snsIcon">
 				<a href="https://www.facebook.com/csaATUGA" target="_blank"><img src="assets/img/fb.gif" /></a>
@@ -121,33 +92,42 @@ $(document).ready(function() {
 		
 			<form action="subscribe.php" method="POST">
 				<input id="subscriber" />
-				<input id="submit" type="submit" value="SUBMIT" />
+				<input id="submit" type="submit" value="Subscribe!" />
 			</form>
 			
 		</div>
 	</div>
 	<div class="rightPart">
-		<div style="width:535px; height: auto;">
-			<?php 
-			if(!empty($defaultContent)){
-				foreach($defaultContent as $defaultValue){
-			?>
-				<h1 align="center"><?PHP echo $defaultValue['title']; ?></h1>
-				<h5 style="font-size: 14px;" align="center"><?php echo $defaultValue['author']; ?>  <?php echo date("Y-m-d", $defaultValue['dateline']); ?></h5>
-				
-				<?php echo $defaultValue['content'];?>
-			<?php
-				$count++;
-				
-				if($count==1){
-					break;
-				}
-			}
-			}
-			
-			?>
-		<!--/div-->
-		</div>
+        <h3 align="center">新闻中心</h3>
+        <div class="container">
+            <table id="example" class="display" cellspacing="0" width="100%">
+                <thead>
+                <tr>
+                    <td>标题</td>
+                    <td>作者</td>
+                    <td>日期</td>
+                </tr>
+                </thead>
+                <tfoot>
+                </tfoot>
+                <tbody>
+                <?php
+                if(!empty($data)){
+                    foreach($data as $value){
+                       ?>
+                        <tr>
+                            <td><a href="newsDetail.php?id=<?php echo $value['id']; ?>"><?php echo $value['title']; ?></a></td>
+                            <td><?php echo $value['author'] ?></td>
+                            <td><?php echo date('M-d', $value['dateline']) ?></td>
+                        </tr>
+                    <?php
+                    }
+                }
+                ?>
+                </tbody>
+            </table>
+        </div>
+
 	</div>
 	</div>
 </div>
