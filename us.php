@@ -3,12 +3,12 @@
 <head>
 	<title>乔治亚大学中国学生学者联合会 | 主页</title>
 	<meta http-equiv="Content-Type" content="text/html; charset = UTF-8"/>
-    <link rel="stylesheet" type="text/css" href="css/usStyle.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/usStyle.css">
 </head>
 <body>
 <div class="header">
 
-	<a href="home.php"><img src="img/logoFixed.png" id="logo"/></a>
+	<a href="home.php"><img src="assets/img/logoFixed.png" id="logo"/></a>
 	
 	<h1 id="CHNtitle" style="font-family: chinese">佐治亚大学中国学生学者联谊会</h1>
 	<h2 id="ENGtitle">CHINESE STUDENT ASSOCIATION AT THE UNIVERSITY OF GEORGIA</h2>
@@ -98,7 +98,7 @@
 				">Join Us</a>
 			</div>
 			<div id="constitution">
-				<a href="file/constitution.pdf" target="_blank">Constitution</a>
+				<a href="resources/file/constitution.pdf" target="_blank">Constitution</a>
 			</div>
 				<script>
 					function contactUs(){
@@ -117,7 +117,7 @@
 					
 					function aboutUs(){
 						document.getElementById("usContent").innerHTML = "<strong>Our Mission: </strong><br><p>To promote communication and friendship, social and career development, within the Chinese community;</p><p>To facilitate communication and friendship between the Chinese community and friends in local community;</p><p>To promote Chinese culture and awareness of the modern China;</p><p>To facilitate the adjustment of incoming and current Chinese students to American life and culture;</p>";
-						document.getElementById("pic").innerHTML = "<img id='usPic' style='width:530px; height:auto;' src='img/usPic.JPG' />";
+						document.getElementById("pic").innerHTML = "<img id='usPic' style='width:530px; height:auto;' src='assets/img/usPic.JPG' />";
 						document.getElementById("EngUs").innerHTML = "About Us";
 						document.getElementById("ChnUs").innerHTML = "关于我们";
 					}
@@ -131,9 +131,9 @@
 		</div>
 		<div class="newsSubscriber">
 			<div class="snsIcon">
-				<a href="https://www.facebook.com/csaATUGA" target="_blank"><img src="img/fb.gif" /></a>
-				<a href="http://page.renren.com/670000616?checked=true" target="_blank"><img src="img/renren.png" /></a>
-				<a href="http://weibo.com/u/3212988263" target="_blank"><img src="img/weibo.png" /></a>
+				<a href="https://www.facebook.com/csaATUGA" target="_blank"><img src="assets/img/fb.gif" /></a>
+				<a href="http://page.renren.com/670000616?checked=true" target="_blank"><img src="assets/img/renren.png" /></a>
+				<a href="http://weibo.com/u/3212988263" target="_blank"><img src="assets/img/weibo.png" /></a>
 			</div>
 		
 			<form action="subscribe.php" method="POST">
@@ -147,7 +147,7 @@
 		
 		<div class="rightPartDetailContent">
 			<div id="pic">
-				<img id="usPic" style="width:530px; height:auto;" src="img/usPic.JPG" />
+				<img id="usPic" style="width:530px; height:auto;" src="assets/img/usPic.JPG" />
 			</div>
 				<h2 id="EngUs">About Us<h2>
 

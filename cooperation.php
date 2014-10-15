@@ -3,12 +3,12 @@
 <head>
 	<title>乔治亚大学中国学生学者联合会 | 主页</title>
 	<meta http-equiv="Content-Type" content="text/html; charset = UTF-8"/>
-    <link rel="stylesheet" type="text/css" href="css/usStyle.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/usStyle.css">
 </head>
 <body>
 <div class="header">
 
-	<a href="home.php"><img src="img/logoFixed.png" id="logo"/></a>
+	<a href="home.php"><img src="assets/img/logoFixed.png" id="logo"/></a>
 	
 	<h1 id="CHNtitle" style="font-family: chinese">佐治亚大学中国学生学者联谊会</h1>
 	<h2 id="ENGtitle">CHINESE STUDENT ASSOCIATION AT THE UNIVERSITY OF GEORGIA</h2>
@@ -37,7 +37,7 @@
 
 <div class="content">
 	<div style="width:1200px;margin-right:auto;margin-left:auto;">
-	<img src="cooperationAds/Fooksfood.jpg" style="width:1200px;" />
+	<img src="resources/cooperationAds/Fooksfood.jpg" style="width:1200px;" />
 	</div>
 </div>
 

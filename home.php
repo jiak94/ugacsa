@@ -23,11 +23,11 @@
 <head>
 	<title>佐治亚大学中国学生学者联谊会 | 主页</title>
 	<meta http-equiv="Content-Type" content="text/html; charset = UTF-8"/>
-    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
 <body>
 <div class="header">
 	
-	<a href="home.php"><img src="img/logoFixed.png" id="logo"/></a>
+	<a href="home.php"><img src="assets/img/logoFixed.png" id="logo"/></a>
 	
 	<h1 id="CHNtitle" style="font-family: chinese;">佐治亚大学中国学生学者联谊会</h1>
 	<h2 id="ENGtitle">CHINESE STUDENT ASSOCIATION AT THE UNIVERSITY OF GEORGIA</h2>
@@ -90,9 +90,9 @@
     </style>
     <!-- use jssor.slider.min.js instead for release -->
     <!-- jssor.slider.min.js = (jssor.core.js + jssor.utils.js + jssor.slider.js) -->
-    <script type="text/javascript" src="js/jssor.core.js"></script>
-    <script type="text/javascript" src="js/jssor.utils.js"></script>
-    <script type="text/javascript" src="js/jssor.slider.js"></script>
+    <script type="text/javascript" src="assets/js/jssor.core.js"></script>
+    <script type="text/javascript" src="assets/js/jssor.utils.js"></script>
+    <script type="text/javascript" src="assets/js/jssor.slider.js"></script>
     <script>
         jssor_slider1_starter = function (containerId) {
             //Reference http://www.jssor.com/development/slider-with-slideshow-no-jquery.html
@@ -286,28 +286,28 @@
         <div u="slides" style="cursor: move; position: absolute; left: 0px; top: 0px; width: 1000px;; height: 251px;
             overflow: hidden;">
             <div>
-                <a u=image href="#"><img src="img/landscape/01.jpg" /></a>
+                <a u=image href="#"><img src="assets/img/landscape/01.jpg" /></a>
                 <div u=caption t="*" class="captionOrange"  style="position:absolute; left:629px; top: 0px; width:371px; height:251px;"> 
                 <h1 style="font-size: 30px;">University of Georgia</h1>
                 <p>University of Georgia was founded in 1785, a very long history in Georgia. Georgia as an indicator of the quality of an outstanding teacher of higher learning have.....</p>
                 </div>
             </div>
             <div>
-                <a u=image href="#"><img src="img/landscape/02.jpg" /></a>
+                <a u=image href="#"><img src="assets/img/landscape/02.jpg" /></a>
                 <div u=caption t="*" class="captionOrange"  style="position:absolute; left:629px; top: 0px; width:371px; height:251px;"> 
                 <h1 style="font-size: 30px;">University of Georgia</h1>
                 <p>University of Georgia was founded in 1785, a very long history in Georgia. Georgia as an indicator of the quality of an outstanding teacher of higher learning have.....</p>
                 </div>
             </div>
             <div>
-                <a u=image href="#"><img src="img/landscape/03.jpg" /></a>
+                <a u=image href="#"><img src="assets/img/landscape/03.jpg" /></a>
                 <div u=caption t="*" class="captionOrange"  style="position:absolute; left:629px; top: 0px; width:371px; height:251px;"> 
                 <h1 style="font-size: 30px;">University of Georgia</h1>
                 <p>University of Georgia was founded in 1785, a very long history in Georgia. Georgia as an indicator of the quality of an outstanding teacher of higher learning have.....</p>
                 </div>
             </div>
             <div>
-                <a u=image href="#"><img src="img/landscape/04.jpg" /></a>
+                <a u=image href="#"><img src="assets/img/landscape/04.jpg" /></a>
                 <div u=caption t="*" class="captionOrange"  style="position:absolute; left:629px; top: 0px; width:371px; height:251px;"> 
                 <h1 style="font-size: 30px;">University of Georgia</h1>
                 <p>University of Georgia was founded in 1785, a very long history in Georgia. Georgia as an indicator of the quality of an outstanding teacher of higher learning have.....</p>
@@ -387,7 +387,7 @@
     <!-- Jssor Slider End -->
 <div class="content">
 	<div class="arch">
-		<img src="img/arch.png" />
+		<img src="assets/img/arch.png" />
 	</div>	
 <div class="contentContainer" style="width: 975px; height:345px; margin-left: auto; margin-right:auto;">
 	<div class="news">
@@ -496,13 +496,13 @@
 
 <div class="snsICON" style="margin-top:5px;">
 	<div class="weibo">
-		<a href="http://weibo.com/u/3212988263" target="_blank"><img src="img/weibo.png" /></a>
+		<a href="http://weibo.com/u/3212988263" target="_blank"><img src="assets/img/weibo.png" /></a>
 	</div>
 	<div class="facebook">
-		<a href="https://www.facebook.com/csaATUGA" target="_blank"><img src="img/fb.gif" /></a>
+		<a href="https://www.facebook.com/csaATUGA" target="_blank"><img src="assets/img/fb.gif" /></a>
 	</div>
 	<div class="renren">
-		<a href="http://page.renren.com/670000616?checked=true" target="_blank"><img src="img/renren.png" /></a>
+		<a href="http://page.renren.com/670000616?checked=true" target="_blank"><img src="assets/img/renren.png" /></a>
 	</div>
 </div>
 </div>

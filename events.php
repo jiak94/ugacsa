@@ -18,17 +18,17 @@
 <head>
 	<title>佐治亚大学中国学生学者联合会 | 活动中心</title>
 	<meta http-equiv="Content-Type" content="text/html; charset = UTF-8"/>
-    <link rel="stylesheet" type="text/css" href="css/eventsStyle.css">
-	<link rel="stylesheet" type="text/css" href="datatable/media/css/jquery.dataTables.css">
-	<link rel="stylesheet" type="text/css" href="datatable/examples/resources/syntax/shCore.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/eventsStyle.css">
+	<link rel="stylesheet" type="text/css" href="app/datatable/media/css/jquery.dataTables.css">
+	<link rel="stylesheet" type="text/css" href="app/datatable/examples/resources/syntax/shCore.css">
 
 	<style type="text/css" class="init">
 
 	</style>
-	<script type="text/javascript" language="javascript" src="datatable/media/js/jquery.js"></script>
-	<script type="text/javascript" language="javascript" src="datatable/media/js/jquery.dataTables.js"></script>
-	<script type="text/javascript" language="javascript" src="datatable/examples/resources/syntax/shCore.js"></script>
-	<script type="text/javascript" language="javascript" src="datatable/examples/resources/demo.js"></script>
+	<script type="text/javascript" language="javascript" src="app/datatable/media/js/jquery.js"></script>
+	<script type="text/javascript" language="javascript" src="app/datatable/media/js/jquery.dataTables.js"></script>
+	<script type="text/javascript" language="javascript" src="app/datatable/examples/resources/syntax/shCore.js"></script>
+	<script type="text/javascript" language="javascript" src="app/datatable/examples/resources/demo.js"></script>
 	<script type="text/javascript" language="javascript" class="init">
 
 
@@ -46,7 +46,7 @@ $(document).ready(function() {
 <body>
 <div class="header">
 
-	<a href="home.php"><img src="img/logoFixed.png" id="logo"/></a>
+	<a href="home.php"><img src="assets/img/logoFixed.png" id="logo"/></a>
 	
 	<h1 id="CHNtitle" style="font-family: chinese">佐治亚大学中国学生学者联谊会</h1>
 	<h2 id="ENGtitle">CHINESE STUDENT ASSOCIATION AT THE UNIVERSITY OF GEORGIA</h2>
@@ -110,9 +110,9 @@ $(document).ready(function() {
 
 		<div class="newsSubscriber">
 			<div class="snsIcon">
-				<a href="https://www.facebook.com/csaATUGA" target="_blank"><img src="img/fb.gif" /></a>
-				<a href="http://page.renren.com/670000616?checked=true" target="_blank"><img src="img/renren.png" /></a>
-				<a href="http://weibo.com/u/3212988263" target="_blank"><img src="img/weibo.png" /></a>
+				<a href="https://www.facebook.com/csaATUGA" target="_blank"><img src="assets/img/fb.gif" /></a>
+				<a href="http://page.renren.com/670000616?checked=true" target="_blank"><img src="assets/img/renren.png" /></a>
+				<a href="http://weibo.com/u/3212988263" target="_blank"><img src="assets/img/weibo.png" /></a>
 			</div>
 		
 			<form action="subscribe.php" method="POST">

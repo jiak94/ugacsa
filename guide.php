@@ -15,12 +15,12 @@
 <head>
 	<title>乔治亚大学中国学生学者联合会 | 主页</title>
 	<meta http-equiv="Content-Type" content="text/html; charset = UTF-8"/>
-    <link rel="stylesheet" type="text/css" href="css/usStyle.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/usStyle.css">
 </head>
 <body>
 <div class="header">
 
-	<a href="home.php"><img src="img/logoFixed.png" id="logo"/></a>
+	<a href="home.php"><img src="assets/img/logoFixed.png" id="logo"/></a>
 	
 	<h1 id="CHNtitle" style="font-family: chinese">佐治亚大学中国学生学者联谊会</h1>
 	<h2 id="ENGtitle">CHINESE STUDENT ASSOCIATION AT THE UNIVERSITY OF GEORGIA</h2>
@@ -51,11 +51,11 @@
 	
 	<h2 align="center">指南文件:</h2>
 	<ul type="disc" style="margin-right:auto; margin-left:auto;width:150px;">
-		<li><a href="file/immu.pdf" target="_blank">疫苗&体检</a></li>
-		<li><a href="file/fees.pdf" target="_blank">缴费和汇款</a></li>
-		<li><a href="file/CHIairport.pdf" target="_blank">芝加哥机场攻略</a></li>
-		<li><a href="file/beforeyougo.pdf" target="_blank">行前清单</a></li>
-		<li><a href="file/preparation.pdf" target="_blank">飞跃及相关准备</a></li>
+		<li><a href="resources/file/immu.pdf" target="_blank">疫苗&体检</a></li>
+		<li><a href="resources/file/fees.pdf" target="_blank">缴费和汇款</a></li>
+		<li><a href="resources/file/CHIairport.pdf" target="_blank">芝加哥机场攻略</a></li>
+		<li><a href="resources/file/beforeyougo.pdf" target="_blank">行前清单</a></li>
+		<li><a href="resources/file/preparation.pdf" target="_blank">飞跃及相关准备</a></li>
 	</ul>
 	<h2 align="center">常用网站:</h2>
 	
