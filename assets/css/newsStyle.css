@@ -78,7 +78,7 @@ h2[id=ENGtitle]
 	
 }
 
-form
+form#search
 {
 	min-height: 30px;
 	display: inline;
@@ -149,7 +149,7 @@ li
 .content
 {
 	width: auto;
-	min-height: 900px;
+	min-height: 700px;
 	padding-top: 30px;
 	padding-right: 0px;
 	padding-left: 0px;
@@ -162,12 +162,12 @@ li
 	width: 847px;
 	margin-right: auto;
 	margin-left: auto;
-	min-height: 900px;
+	min-height: 700px;
 }
 .leftPart
 {
 	width: 250px;
-	min-height: 900px;
+	min-height: 700px;
 	margin-left: 0px;
 	padding-right: 30px;
 	padding-left: 10px;
@@ -182,9 +182,7 @@ li
 
 .newsSubscriber
 {
-	position: absolute;
-	top: 950px;
-
+	height: auto;
 }
 
 img[id=arch]
@@ -196,7 +194,8 @@ img[id=arch]
 
 .snsIcon
 {
-	margin: 20px;
+    padding-right: 10px;
+    margin-top: 10px;
 }
 input[id=subscriber]
 {
@@ -212,7 +211,7 @@ input[id=submit]
 .rightPart
 {
 	width: 535px;
-	min-height: 900px;
+	min-height: 700px;
 	padding-left: 20px;
 	padding-right: 0px;
 	padding-top: 10px;

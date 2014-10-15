@@ -79,7 +79,7 @@ h2[id=ENGtitle]
 	
 }
 
-form
+form#search
 {
 	min-height: 30px;
 	display: inline;
@@ -163,7 +163,7 @@ input[id=searchBox] {
 	width: 847px;
 	margin-right: auto;
 	margin-left: auto;
-	min-height: 900px;
+	min-height: 500px;
 }
 .leftPart
 {
@@ -181,15 +181,20 @@ input[id=searchBox] {
 }
 .usList 
 {
-	float: right;
+	float: left;
+
+    padding: 0px;
+    margin: 0px;
+    width: auto;
+    height: auto;
 }
 
 div[id=about]
 {
 	width: 250px;
 	height: auto;
-	padding-left: 10px;
-	margin: 10px;
+	padding-left: 0px;
+	margin-top: 10px;
 	background-color: rgb(201,201,201);
 }
 a[id=aboutUs]
@@ -201,10 +206,10 @@ a[id=aboutUs]
 
 div[id=contact], div[id=join], div[id=constitution], div[id=committee]
 {
-	width: 250px;
+	width: 200px;
 	height: auto;
-	padding-left: 10px;
-	margin: 10px;
+	padding-left: 0px;
+	margin-top: 10px;
 }
 #contact a, #join a, #constitution a, #committee a{
 	text-decoration: none;
@@ -214,9 +219,7 @@ div[id=contact], div[id=join], div[id=constitution], div[id=committee]
 
 .newsSubscriber
 {
-	position: relative;
-	top: 600px;
-
+    height: auto;
 }
 
 img[id=arch]
@@ -228,7 +231,8 @@ img[id=arch]
 
 .snsIcon
 {
-	margin: 20px;
+	padding-right: 10px;
+    margin-top: 10px;
 }
 input[id=subscriber]
 {
@@ -244,7 +248,7 @@ input[id=submit]
 .rightPart
 {
 	width: 535px;
-	min-height: 900px;
+	min-height: 500px;
 	padding-left: 20px;
 	padding-right: 0px;
 	padding-top: 10px;

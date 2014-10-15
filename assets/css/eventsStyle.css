@@ -86,7 +86,7 @@ h2[id=ENGtitle]
 	
 }
 
-form
+form#search
 {
 	min-height: 30px;
 	display: inline;
@@ -174,7 +174,7 @@ li
 .eventsList
 {
 	width: 250px;
-	height: 900px;
+	min-height: 700px;
 	margin-left: 0px;
 	padding-right: 30px;
 	padding-left: 10px;
@@ -202,13 +202,11 @@ li
 
 .newsSubscriber
 {
-	position: relative;
-	top: 600px;
-
+    height: auto;
 }
 .snsIcon
 {
-	margin: 20px;
+    padding-right: 10px;
 }
 input[id=subscriber]
 {
@@ -224,7 +222,7 @@ input[id=submit]
 .eventsDetail
 {
 	width: 535px;
-	min-height: 900px;
+	min-height: 700px;
 	padding-left: 20px;
 	padding-right: 0px;
 	padding-top: 10px;
