@@ -34,15 +34,16 @@
 
 $(document).ready(function() {
 	$('#example').dataTable({
-		searching: false,
 		ordering: false,
 		"lengthMenu":[16],
 		"lengthChange": false,
         "columns":[
-            {"width": "70%"},
+            {"width": "70%", className: "dt-left"},
             {"width": "15%"},
             {"width": "15%"}
-        ]
+        ],
+        searching: false,
+        "info": false
 	});
 } );
 
@@ -98,9 +99,9 @@ $(document).ready(function() {
 		</div>
 	</div>
 	<div class="rightPart">
-        <h3 align="center">新闻中心</h3>
+        <h2 align="center">新闻中心</h2>
         <div class="container">
-            <table id="example" class="display" cellspacing="0" width="100%">
+            <table id="example" class="row-border hover" cellspacing="0" width="100%">
                 <thead>
                 <tr>
                     <td>标题</td>
