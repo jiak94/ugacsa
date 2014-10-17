@@ -182,6 +182,7 @@
 		<a href="link.modify.php?id=<?php echo $linkValue['id'] ?>">修改</a>
 		</td>
 	</tr>
+</table>
 <?php
 		}
 	}
