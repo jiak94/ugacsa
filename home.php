@@ -241,8 +241,8 @@
 
                 $BulletNavigatorOptions: {                                //[Optional] Options to specify and enable navigator or not
                     $Class: $JssorBulletNavigator$,                       //[Required] Class to create navigator instance
-                    $ChanceToShow: 0,                               //[Required] 0 Never, 1 Mouse Over, 2 Always
-                    $AutoCenter: 0,                                 //[Optional] Auto center navigator in parent container, 0 None, 1 Horizontal, 2 Vertical, 3 Both, default value is 0
+                    $ChanceToShow: 2,                               //[Required] 0 Never, 1 Mouse Over, 2 Always
+                    $AutoCenter: 1,                                 //[Optional] Auto center navigator in parent container, 0 None, 1 Horizontal, 2 Vertical, 3 Both, default value is 0
                     $Steps: 1,                                      //[Optional] Steps to go for each navigation request, default value is 1
                     $Lanes: 1,                                      //[Optional] Specify lanes to arrange items, default value is 1
                     $SpacingX: 10,                                   //[Optional] Horizontal space between each item in pixel, default value is 0
@@ -252,7 +252,7 @@
 
                 $ArrowNavigatorOptions: {
                     $Class: $JssorArrowNavigator$,              //[Requried] Class to create arrow navigator instance
-                    $ChanceToShow: 0                                //[Required] 0 Never, 1 Mouse Over, 2 Always
+                    $ChanceToShow: 1                                //[Required] 0 Never, 1 Mouse Over, 2 Always
                 }
             };
 
@@ -277,7 +277,7 @@
             <div style="filter: alpha(opacity=70); opacity:0.7; position: absolute; display: block;
                 background-color: #000; top: 0px; left: 0px;width: 100%;height:100%;">
             </div>
-            <div style="position: absolute; display: block; background: url(/assets/img/loading.gif) no-repeat center center;
+            <div style="position: absolute; display: block; background: url(/assets/img/logo.png) no-repeat center center;
                 top: 0px; left: 0px;width: 100%;height:100%;">
             </div>
         </div>
