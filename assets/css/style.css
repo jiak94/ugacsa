@@ -110,7 +110,9 @@ input[id=searchBox] {
 	height: 60px;
 	width: auto;
 	background-color: rgb(158,7,7);
+
 	background-image: url(/assets/img/cloud.png);
+
 	margin-right: 0px;
 	margin-left: 0px;
 	min-width: 1000px;
@@ -133,12 +135,14 @@ input[id=searchBox] {
 	height: 60px;
 }
 
+
 ul
 {
-	background-image: url(/assets/img/cloud.png);
+	/*background-image: url(/assets/img/cloud.png);*/
 	list-style-type: none;
 	display: inline;
 }
+
 li
 {
 	font-family: Calibri;

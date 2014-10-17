@@ -129,13 +129,13 @@ input[id=searchBox] {
 	height: 60px;
 }
 
-ul
+.menu ul
 {
-	background-image: url(/assets/img/cloud.png);
+	/*background-image: url(/assets/img/cloud.png);*/
 	list-style-type: none;
 	display: inline;
 }
-li
+.menu li
 {
 	font-family: Calibri;
 	float: left;
