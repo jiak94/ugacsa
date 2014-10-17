@@ -435,7 +435,7 @@
 			<a href="http://bbs.ugacsa.com" target="_blank">More</a>
 		</div>
 		<div class="bbsContent">
-			<script type="text/javascript" src="http://bbs.ugacsa.com/api.php?mod=js&bid=3"></script>
+			<!--<script type="text/javascript" src="http://bbs.ugacsa.com/api.php?mod=js&bid=3"></script>-->
 		</div>
 		<div class="bbsContent">
 		
