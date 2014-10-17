@@ -15,6 +15,44 @@
 	<title>新闻中心 | 详情 |<?php echo $data['title']; ?></title>
 	<meta http-equiv="Content-Type" content="text/html; charset = UTF-8"/>
     <link rel="stylesheet" type="text/css" href="assets/css/usStyle.css">
+    <script type="text/javascript" src="assets/js/jquery-2.1.0.min.js"></script>
+    <style type="text/css">
+        #backToTop{
+            display: none;
+            width:50px;
+            height:50px;
+            position:fixed;
+            right:50px;
+            bottom:150px;
+            background: url('/assets/img/backtotop.png') no-repeat;
+        }
+    </style>
+    <script type="text/javascript">
+        function backToTop()
+        {
+            $(window).scroll(function(e) {
+                //若滚动条离顶部大于100元素
+                if($(window).scrollTop()>100)
+                    $("#backToTop").fadeIn(1000);//以1秒的间隔渐显id=gotop的元素
+                else
+                    $("#backToTop").fadeOut(1000);//以1秒的间隔渐隐id=gotop的元素
+            });
+        };
+        $(function(){
+            //点击回到顶部的元素
+            $("#backToTop").click(function(e) {
+                //以1秒的间隔返回顶部
+                $('body,html').animate({scrollTop:0},1000);
+            });
+            $("#backToTop").mouseover(function(e) {
+                $(this).css("background","url('/assets/img/backtotop.png') no-repeat");
+            });
+            $("#backToTop").mouseout(function(e) {
+                $(this).css("background","url('/assets/img/backtotop.png') no-repeat");
+            });
+            backToTop();//实现回到顶部元素的渐显与渐隐
+        });
+    </script>
 </head>
 <body>
 <div class="header">
@@ -48,7 +86,7 @@
 
 <div class="content">
 	<a href="news.php" style="position: relative; left: 150px;text-decoration: underline;">&lt;返回</a>
-
+    <div id="backToTop"></div>
 	<div class="content_resize">
 	<h1 align="center"><?php echo $data['title']; ?></h1>
 	<div class="authorDate" align="center">
