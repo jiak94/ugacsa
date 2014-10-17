@@ -3,14 +3,16 @@
 	
 	$sql = "SELECT * FROM Event order by id desc";
 	$query = mysql_query($sql);
-	
+
+
 	if ($query&&mysql_num_rows($query)){
 		while($row = mysql_fetch_assoc($query)){
 			$data[]=$row;
-			$defaultContent[] = $row;
+			//$defaultContent[] = $row;
 		}
 	}
 	$count = 0;
+
 
 ?>
 <!DOCTYPE html>
@@ -37,7 +39,12 @@ $(document).ready(function() {
 		searching: false,
 		ordering: false,
 		"lengthMenu":[16],
-		"lengthChange": false
+		"lengthChange": false,
+        "columns":[
+            {"width": "70%", className: "dt-left"},
+            {"width": "30%"},
+        ],
+        "info": false
 	});
 } );
 
@@ -76,38 +83,6 @@ $(document).ready(function() {
 <div class="content">
 	<div class="content_resize">
 	<div class="eventsList">
-		<div class="container">
-
-			
-			
-			<table id="example" class="display" cellspacing="0" width="100%">
-				<thead>
-					<tr>
-						<th>活动</th>
-					</tr>
-				</thead>
-
-				<tfoot>
-					
-				</tfoot>
-
-				<tbody>
-					<?php 
-				if(!empty($data)){
-					foreach($data as $value){
-			?>
-			<tr><td><a href="eventDetail.php?id=<?php echo $value['id']; ?>"><?php echo $value['title']; ?></a></td></tr>
-			<?php
-					}
-				}
-			?>
-
-
-
-				</tbody>
-			</table>
-	</div>
-
 		<div class="newsSubscriber">
 			<div class="snsIcon">
 				<a href="https://www.facebook.com/csaATUGA" target="_blank"><img src="assets/img/fb.gif" /></a>
@@ -123,28 +98,31 @@ $(document).ready(function() {
 		</div>
 	</div>
 	<div class="eventsDetail">
-		<div class="eventsDetailContent">
-		<?php
-			if(!empty($defaultContent)){
-			foreach($defaultContent as $defaultValue){
-		?>
-				<strong><?php echo $defaultValue['title']; ?></strong>
-				<br/>
-				<strong>日期: <?php echo $defaultValue['date']; ?></strong>
-				<br />
-				<strong>主办者: <?php echo $defaultValue['holder']; ?>
-				<br />
-				<strong>地点: <?php echo $defaultValue['place']; ?></strong>
-				<p style="font-size:14px; line-height:21px;"><?php echo $defaultValue['detail']; ?></p>
-		<?php
-			$count++;
-			if($count ==1){
-				break;
-			}
-		}
-		}
-		?>
-		</div>		
+        <div class="container">
+            <table id="example" class="display" cellspacing="0" width="100%">
+                <thead>
+                <tr>
+                    <td>活动</td>
+                    <td>举办日期</td>
+                </tr>
+                </thead>
+                <tbody>
+                <?php
+                if(!empty($data)){
+                    foreach($data as $value){
+                        ?>
+                        <tr>
+                            <td><a href="eventDetail.php?id=<?php echo $value['id']; ?>"><?php echo $value['title']; ?></a></td>
+
+                            <td><?php echo$value['date'] ?></td>
+                        </tr>
+                    <?php
+                    }
+                }
+                ?>
+                </tbody>
+            </table>
+        </div>
 	</div>
 	</div>
 </div>
