@@ -28,7 +28,7 @@
 		<li><a href="news.php"><span>新闻<br/>News</span></a></li>
 		<li><a href="events.php"><span>活动<br/>Events</span></a></li>
 		<li class="active"><a href="us.php"><span>我们<br/>Us</span></a></li>
-		<li><a href="#"><span>指南<br/>Guide</span></a></li>
+		<li><a href="guide.php"><span>指南<br/>Guide</span></a></li>
 		<li><a href="cooperation.php"><span>合作<br/>Cooperation</span></a></li>
 		<li><a href="http://bbs.ugacsa.com" target="_blank"><span>论坛<br/>BBS</span></a></li>
 	</ul>		
