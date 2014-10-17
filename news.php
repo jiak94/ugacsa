@@ -32,23 +32,24 @@
 	<script type="text/javascript" language="javascript" class="init">
 
 
-$(document).ready(function() {
-	$('#example').dataTable({
-		ordering: false,
-		"lengthMenu":[16],
-		"lengthChange": false,
-        "columns":[
-            {"width": "70%", className: "dt-left"},
-            {"width": "15%"},
-            {"width": "15%"}
-        ],
-        searching: false,
-        "info": false
-	});
-} );
+        $(document).ready(function() {
+	    $('#example').dataTable({
+		    ordering: false,
+		    "lengthMenu":[16],
+		    "lengthChange": false,
+            "columns":[
+                {"width": "70%", className: "dt-left"},
+                {"width": "15%"},
+                {"width": "15%"}
+            ],
+            searching: false,
+            "info": false
+	    });
+        });
 
 
-	</script></head>
+	</script>
+</head>
 <body>
 <div class="header">
 
