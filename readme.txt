@@ -1,4 +1,5 @@
 Hi all,
+Test!
 This is the offical website for the Chinese Student Association at the University of Georgia.
 
 It is developed using php.
