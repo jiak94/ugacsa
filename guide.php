@@ -25,8 +25,8 @@
 	<h1 id="CHNtitle" style="font-family: chinese">佐治亚大学中国学生学者联谊会</h1>
 	<h2 id="ENGtitle">CHINESE STUDENT ASSOCIATION AT THE UNIVERSITY OF GEORGIA</h2>
 
-	<form action="http://www.google.com/search" method="get" target="_blank">
-		<input name="sitesearch" value="ugacsa.com/*" type="hidden">
+	<form action="http://www.google.com/search" method="get" target="_blank" id="search">
+		<input name="sitesearch" value="ugacsa.com" type="hidden">
 		<input name="hl" value="zh-CN" type="hidden">
 		<input name="ie" value="UTF-8" type="hidden">
 		<input onfocus="if( this.value=='Search CSA') {this.value='' };" size="25" name="q" id="searchBox" value="Search CSA" type="text">
