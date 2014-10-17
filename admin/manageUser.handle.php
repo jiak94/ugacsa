@@ -7,12 +7,21 @@
  */
 require_once("../connect.php");
 require_once("../inc/class/user.php");
+session_start();
+$currentUser = $_SESSION['username'];
+if($_SESSION['login']==1){
+
+}
+else{
+    echo "<script> alert ('您没有访问权限, 请登录'); window.location.href = 'login.php'</script>";
+    exit();
+}
 
 $username = $_POST['username'];
 $password = $_POST['password'];
 $role = $_POST['role'];
 
-$USER = new user($username);
+$USER = new User($username);
 
 $isAdmin = 0;
 $isPR = 0;
@@ -30,7 +39,7 @@ else if ($role == 'reviewer')
 }
 
 if($USER->createNewUser($username, $password, $isAdmin, $isPR, $isReviewer)){
-    echo "done";
+    echo "<script> alert('成功创建用户');window.location.href = '../manageUser.php'</script>";
 }
 else{
     echo "wrong";

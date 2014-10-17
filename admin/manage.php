@@ -1,8 +1,11 @@
 <?php
 	require_once("../connect.php");
+    require_once("../inc/class/User.php");
 
 	session_start();
-	$currentUser = $_SESSION['username'];
+    $USER = new User($_SESSION['username']);
+    $role = $USER->getRole();
+	$currentUser = $USER->getUsername();
 	if($_SESSION['login']==1){
 		
 	}
@@ -15,17 +18,20 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>文章管理</title>
+	<title>后台管理</title>
 	<meta charset="utf-8">
 </head>
 <body>
 
 <div style="float:right">
 <strong>当前用户: <?php echo $currentUser; ?></strong>
+    <strong>权限: <?php echo $role; ?></strong>
 <br>
 <a href="modifyPassword.php">修改密码</a>
 <br>
 <a href="logout.php">退出登录</a>
+    <br>
+    <a href="manageUser.php">用户管理</a>
 </div>
 
 
