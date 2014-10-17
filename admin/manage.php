@@ -20,6 +20,45 @@
 <head>
 	<title>后台管理</title>
 	<meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="../app/datatable/media/css/jquery.dataTables.css">
+    <link rel="stylesheet" type="text/css" href="../app/datatable/examples/resources/syntax/shCore.css">
+    <style type="text/css" class="init">
+    </style>
+    <script type="text/javascript" language="javascript" src="../app/datatable/media/js/jquery.js"></script>
+    <script type="text/javascript" language="javascript" src="../app/datatable/media/js/jquery.dataTables.js"></script>
+    <script type="text/javascript" language="javascript" src="../app/datatable/examples/resources/syntax/shCore.js"></script>
+    <script type="text/javascript" language="javascript" class="init">
+        $(document).ready(function() {
+            $('#article').dataTable({
+                ordering: false,
+                "lengthMenu":[10],
+                "lengthChange": false,
+                searching: true,
+                "info": false
+            });
+        } );
+
+        $(document).ready(function(){
+            $('#event').dataTable({
+                ordering: false,
+                "lengthMenu": [10],
+                "lengthChange": false,
+                searching: true,
+                "info": false
+            })
+        });
+
+        $(document).ready(function(){
+            $('#link').dataTable({
+                ordering:false,
+                "lengthMenu": [10],
+                "lengthChange": false,
+                searching: true,
+                "info": false
+            })
+        });
+
+    </script>
 </head>
 <body>
 
@@ -38,7 +77,7 @@
 <?php
 	
 
-	$sql = "select * from Article order by dateline desc";
+	$sql = "select * from Article order by id desc";
 	$query = mysql_query($sql);
 
 	if($query && mysql_num_rows($query)){
@@ -55,15 +94,18 @@
 
 <h1>文章管理系统</h1>
 <br>
-<div style="float:left">
+<div style="width: 800px; margin: auto">
 <h2>文章列表</h2>
 <a href="article.add.php">发布新文章</a>
-<table border="1">
-	<tr>
+<table id="article" class="display" cellspacing="0" width="100%">
+	<thead>
+    <tr>
 		<td><strong>标题</strong></td>
 		<td><strong>作者</strong></td>
 		<td><strong>操作</strong></td>
 	</tr>
+    </thead>
+    <tbody>
 <?php
 	if(!empty($data)){
 
@@ -85,11 +127,13 @@
 		echo("当前数据库内没有文章");
 	}
 ?>
+    </tbody>
+    <tfoot></tfoot>
 </table>
 </div>
 <?php
 
-	$eventSql = "select * from Event order by dateline desc";
+	$eventSql = "select * from Event order by id desc";
 	$eventQuery = mysql_query($eventSql);
 	
 	if($eventQuery && mysql_num_rows($eventQuery)){
@@ -102,18 +146,21 @@
 	}
 
 ?>
-<div style="float:left; margin-left: 50px;">
+<div style="width: 800px; margin: auto">
 <h2>活动列表</h2>
 <a href="event.add.php">发布新活动</a>
 
-<table border="1">
-	<tr>
+<table id="event" class="display" cellspacing="0" width="100%">
+	<thead>
+    <tr>
 		<td>标题</td>
 		<td>主办方</td>
 		<td>地点</td>
 		<td>日期&时间</td>
 		<td>操作</td>
 	</tr>
+    </thead>
+    <tbody>
 <?php
 	if(!empty($eventData)){
 
@@ -136,6 +183,8 @@
 		echo("当前数据库内没有活动信息");
 	}
 ?>
+    </tbody>
+    <tfoot></tfoot>
 </table>
 </div>
 <?php 
@@ -152,17 +201,20 @@
 	}
 
 ?>
-<div style="float: left; margin-left: 50px;">
+<div style="width: 800px; margin: auto">
 <h2>链接列表</h2>
 <a href="link.add.php">发布新链接</a>
 
-<table border="1">
-	<tr>
+<table id="link" class="display" cellspacing="0" width="100%">
+	<thead>
+    <tr>
 		<td>网站标题</td>
 		<td>网站链接</td>
 		<td>网站类型</td>
 		<td>操作</td>
 	</tr>
+    </thead>
+    <tbody>
 <?php
 	if(!empty($linkData)){
 		foreach($linkData as $linkValue){
@@ -188,6 +240,8 @@
 		<a href="link.modify.php?id=<?php echo $linkValue['id'] ?>">修改</a>
 		</td>
 	</tr>
+    </tbody>
+    <tfoot></tfoot>
 </table>
 <?php
 		}
