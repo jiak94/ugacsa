@@ -49,7 +49,7 @@
 	</tr>
 	<tr>
 		<td>内容</td>
-		<script id="editor" name="detail" type="text/plain" style="width:535px;height:500px;"></script>
+		<script id="editor" name="detail" type="text/plain" style="width:1000px;height:500px;"></script>
 	</tr>
 	<tr>
 		<td><input type="submit" name="button" id="button" value="提交"></td>

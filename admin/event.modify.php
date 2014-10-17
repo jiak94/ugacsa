@@ -54,7 +54,7 @@
 	</tr>
 	<tr>
 		<td>正文</td>
-		<script id="editor" name="detail" type="text/plain" style="width:535px;height:500px;">
+		<script id="editor" name="detail" type="text/plain" style="width:1000px;height:500px;">
 			<?php echo $data['detail'] ?>
 		
 		</script>
