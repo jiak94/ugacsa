@@ -20,11 +20,11 @@
 	$id = $_POST['id'];
 	$title= $_POST['title'];
 	$author=$_POST['author'];
-	$description=$_POST['description'];
+	//$description=$_POST['description'];
 	$content=$_POST['content'];
 	$dateline=time();
 
-	$updateSql = "UPDATE Article SET title='$title', author='$author', description='$description', content='$content', dateline=$dateline WHERE id=$id";
+	$updateSql = "UPDATE Article SET title='$title', author='$author',  content='$content', dateline=$dateline WHERE id=$id";
 	//when develop the sql statement, try to print it out to make sure it works properly.
 	if(mysql_query($updateSql)){
 		echo "<script> alert ('文章修改成功'); window.location.href = 'manage.php'</script>";
