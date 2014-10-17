@@ -40,6 +40,26 @@ class user {
     }
 
     /*
+     * 获取用户权限
+     * @author:Jiakuan
+     * @date: 10/17/14
+     */
+    function getRole(){
+        if( $this->isAdmin()){
+            return "管理员";
+        }
+        else if($this->isPR()){
+            return "发稿人";
+        }
+        else if($this->isReviewer()){
+            return "审稿人";
+        }
+        else{
+            return "普通用户";
+        }
+    }
+
+    /*
      * 获取管理员状态
      * @author Jiakuan
      * @date: 10/16/14
