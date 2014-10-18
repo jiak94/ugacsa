@@ -29,7 +29,7 @@ a:hover
 	width: auto;
 	height: 100px;
 	background-color: rgb(245,245,245);
-	min-width: 1000px;
+	min-width: 1200px;
 }
 #logo
 {
@@ -115,7 +115,7 @@ input[id=searchBox] {
 
 	margin-right: 0px;
 	margin-left: 0px;
-	min-width: 1000px;
+	min-width: 1200px;
 }
 .menu a
 {
