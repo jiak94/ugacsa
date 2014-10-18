@@ -270,7 +270,7 @@
     <!-- You can move inline styles to css file or css block. -->
     <div class="slides" style="width:auto; height: 350px;background-color: rgb(9,9,10); min-width: 1000px;">
     
-    <div id="slider1_container" style="position: relative; width: 1200px; height: 350px; overflow: hidden;margin-left: auto; margin-right: auto">
+    <div id="slider1_container" style="position: relative; width: 1000px; height: 350px; overflow: hidden;margin-left: auto; margin-right: auto">
 
         <!-- Loading Screen -->
         <div u="loading" style="position: absolute; top: 0px; left: 0px;">
@@ -287,28 +287,28 @@
             overflow: hidden;">
             <div>
                 <a u=image href="#"><img src="assets/img/landscape/01.jpg" /></a>
-                <div u=caption t="*" class="captionOrange"  style="position:absolute; left:830px; top: 0px; width:371px; height:350px;">
+                <div u=caption t="*" class="captionOrange"  style="position:absolute; left:630px; top: 0px; width:371px; height:350px;">
                 <h1 style="font-size: 30px;">University of Georgia</h1>
                 <p>University of Georgia was founded in 1785, a very long history in Georgia. Georgia as an indicator of the quality of an outstanding teacher of higher learning have.....</p>
                 </div>
             </div>
             <div>
                 <a u=image href="#"><img src="assets/img/landscape/02.jpg" /></a>
-                <div u=caption t="*" class="captionOrange"  style="position:absolute; left:830px; top: 0px; width:371px; height:350px;">
+                <div u=caption t="*" class="captionOrange"  style="position:absolute; left:630px; top: 0px; width:371px; height:350px;">
                 <h1 style="font-size: 30px;">University of Georgia</h1>
                 <p>University of Georgia was founded in 1785, a very long history in Georgia. Georgia as an indicator of the quality of an outstanding teacher of higher learning have.....</p>
                 </div>
             </div>
             <div>
                 <a u=image href="#"><img src="assets/img/landscape/03.jpg" /></a>
-                <div u=caption t="*" class="captionOrange"  style="position:absolute; left:830px; top: 0px; width:371px; height:350px;">
+                <div u=caption t="*" class="captionOrange"  style="position:absolute; left:630px; top: 0px; width:371px; height:350px;">
                 <h1 style="font-size: 30px;">University of Georgia</h1>
                 <p>University of Georgia was founded in 1785, a very long history in Georgia. Georgia as an indicator of the quality of an outstanding teacher of higher learning have.....</p>
                 </div>
             </div>
             <div>
                 <a u=image href="#"><img src="assets/img/landscape/04.jpg" /></a>
-                <div u=caption t="*" class="captionOrange"  style="position:absolute; left:830px; top: 0px; width:371px; height:350px;">
+                <div u=caption t="*" class="captionOrange"  style="position:absolute; left:630px; top: 0px; width:371px; height:350px;">
                 <h1 style="font-size: 30px;">University of Georgia</h1>
                 <p>University of Georgia was founded in 1785, a very long history in Georgia. Georgia as an indicator of the quality of an outstanding teacher of higher learning have.....</p>
                 </div>
