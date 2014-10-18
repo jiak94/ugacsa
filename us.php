@@ -132,7 +132,7 @@
 		<div class="newsSubscriber">
             <div class="subscribeForm">
                 <form action="subscribe.php" method="POST" style="margin: 0px; padding: 0px;">
-                    <input id="subscriber" />
+                    <input id="subscriber" name="email" pattern="([a-z0-9]*[-_]?[a-z0-9]+)*@([a-z0-9]*[-_]?[a-z0-9]+)+[\.][a-z]{2,3}" title="请输入电子邮箱"/>
                     <input id="submit" type="submit" value="Subcribe!" />
                 </form>
             </div>

@@ -90,9 +90,9 @@ $(document).ready(function() {
 				<a href="http://weibo.com/u/3212988263" target="_blank"><img src="assets/img/weibo.png" /></a>
 			</div>
 		
-			<form action="subscribe.php" method="POST">
-				<input id="subscriber" />
-				<input id="submit" type="submit" value="SUBMIT" />
+			<form action="../admin/newsSubscribe.handle.php" method="POST">
+				<input id="subscriber" name="email" pattern="([a-z0-9]*[-_]?[a-z0-9]+)*@([a-z0-9]*[-_]?[a-z0-9]+)+[\.][a-z]{2,3}" title="请输入电子邮箱"/>
+				<input id="submit" type="submit" value="Subscribe" />
 			</form>
 			
 		</div>
