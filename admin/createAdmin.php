@@ -17,7 +17,7 @@
 	<input id="repassword" name="repassword" type="password" placeholder="再次输入密码" required="true">
 	<br>
 	<h2>邮箱地址:</h2>
-	<input id="email" name="email" type="email" pattern="*@*.*" required="true">
+	<input id="email" name="email" type="email" pattern="([a-z0-9]*[-_]?[a-z0-9]+)*@([a-z0-9]*[-_]?[a-z0-9]+)+[\.][a-z]{2,3}" required="true">
 	<br>
 	<h2>密保问题:</h2>
 	<select name="secretQuestion" id="secretQuestion">
