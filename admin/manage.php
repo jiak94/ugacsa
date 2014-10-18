@@ -58,6 +58,16 @@
             })
         });
 
+        $(document).ready(function(){
+            $('#newsSubscribe').dataTable({
+                ordering: false,
+                "lengthMenu": [10],
+                "lengthChange": false,
+                searching: true,
+                "info": false
+            })
+        });
+
     </script>
 </head>
 <body>
@@ -200,7 +210,56 @@
 		$linkData =  array();
 	}
 
+    $subscribe = "SELECT * FROM Subscribe order by id desc";
+    $subscribeQuery = mysql_query($subscribe);
+    if($subscribeQuery &&mysql_num_rows($subscribeQuery)) {
+        while ($subRow = mysql_fetch_assoc($subscribeQuery)) {
+            $subData[] = $subRow;
+        }
+    }
+    else{
+        $subData = array();
+    }
 ?>
+<div style="width: 800px; margin: auto">
+    <h2>邮件列表</h2>
+    <table id="newsSubscribe" class="display" cellspacing="0" width="100%">
+        <thead>
+        <tr>
+            <td>电子邮件地址</td>
+            <td>是否在邮件列表</td>
+            <td>操作</td>
+        </tr>
+        </thead>
+        <tbody>
+        <?php
+            if(!empty($subData)){
+                foreach($subData as $subValue) {
+        ?>
+        <tr>
+            <td><?php echo $subValue['Email'] ?></td>
+            <td><?php if($subValue['Added'] ==1){
+                    echo "是";
+                }
+                else{
+                    echo "否";
+                }?></td>
+            <td><?php if($subValue['Added'] ==1){?>
+                    <a href="delFromList.handle.php?id=<?php echo $subValue['id'] ?>">从邮件列表删除</a>
+                <?php
+                }
+                else{ ?>
+                    <a href="addToList.handle.php?id=<?php echo $subValue['id'] ?>">增加到邮件列表</a>
+                <?php } ?></td>
+        </tr>
+        <?php
+                }
+        }
+        ?>
+        </tbody>
+        <tfoot></tfoot>
+    </table>
+</div>
 <div style="width: 800px; margin: auto">
 <h2>链接列表</h2>
 <a href="link.add.php">发布新链接</a>
