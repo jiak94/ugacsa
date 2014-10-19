@@ -170,6 +170,42 @@ class user {
             return false;
         }
     }
+
+    /*
+     * 修改密码
+     * @author: Jiakuan
+     * @date: 10/18/14
+     * @param: password
+     */
+    function modifyPassword($password){
+        $hashPassword = hash('md5', $password);
+        $sql = "UPDATE Admin SET Password = '$hashPassword' WHERE Username = '$this->username'";
+        $query = mysql_query($sql);
+        if($query){
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
+
+    /*
+     * 强制修改密码
+     * @author: Jiakuan
+     * @date: 10/17/14
+     * @param: password, email, secret question, answer
+     */
+   function forceModifyPassword($password, $email, $secretQuestion, $answer){
+       $hashPassword = hash('md5', $password);
+       $sql = "UPDATE Admin SET Password = '$hashPassword', Email = '$email', SecretQuestion = '$secretQuestion', Answer = '$answer', tempPassword = '' WHERE Username = '$this->username'";
+       $query = mysql_query($sql);
+       if($query){
+           return true;
+       }
+       else{
+           return false;
+       }
+   }
 }
 
 ?>
