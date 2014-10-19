@@ -17,7 +17,7 @@
 
 
 
-	$id = $_POST['id'];
+	$id = $_GET['id'];
 	$title= $_POST['title'];
 	$author=$_POST['author'];
 	//$description=$_POST['description'];
