@@ -5,7 +5,7 @@
 		
 	}
 	else{
-		echo "<script> alert ('您没有访问权限, 请登录'); window.location.href = 'login.php'</script>";
+		echo "<script> alert ('您没有访问权限, 请登录'); window.location.href = '../admin/login.php'</script>";
 		exit();
 	}
 	
@@ -20,7 +20,7 @@
 </head>
 <body>
 <h1>修改密码</h1>
-<form id="form" name="form" method="post" action="modifyPassword.handle.php">
+<form id="form" name="form" method="post" action="../admin/modifyPassword.handle.php">
 	<h3>用户名</h3>
 	<input id="username" name="username" required="true" placeholder="用户名">
 	<br>
