@@ -10,7 +10,7 @@
 		
 	}
 	else{
-		echo "<script> alert ('您没有访问权限, 请登录'); window.location.href = 'login.php'</script>";
+		echo "<script> alert ('您没有访问权限, 请登录'); window.location.href = '../admin/login.php'</script>";
 		exit();
 	}
 
@@ -76,11 +76,11 @@
 <strong>当前用户: <?php echo $currentUser; ?></strong>
     <strong>权限: <?php echo $role; ?></strong>
 <br>
-<a href="modifyPassword.php">修改密码</a>
+<a href="../admin/modifyPassword.php">修改密码</a>
 <br>
-<a href="logout.php">退出登录</a>
+<a href="../admin/logout.php">退出登录</a>
     <br>
-    <a href="manageUser.php">用户管理</a>
+    <a href="../admin/manageUser.php">用户管理</a>
 </div>
 
 
@@ -106,7 +106,7 @@
 <br>
 <div style="width: 800px; margin: auto">
 <h2>文章列表</h2>
-<a href="article.add.php">发布新文章</a>
+<a href="../admin/article.add.php">发布新文章</a>
 <table id="article" class="display" cellspacing="0" width="100%">
 	<thead>
     <tr>
@@ -125,8 +125,8 @@
 	<tr>
 		<td>&nbsp;<?php echo $value['title']; ?></td>
 		<td>&nbsp;<?php echo $value['author']; ?></td>
-		<td>&nbsp;<a href="article.del.handle.php?id= <?php echo $value['id'];?>">删除</a> &nbsp;
-		<a href="article.modify.php?id=<?php echo $value['id'];?>">修改</a>
+		<td>&nbsp;<a href="../admin/article.del.handle.php?id= <?php echo $value['id'];?>">删除</a> &nbsp;
+		<a href="../admin/article.modify.php?id=<?php echo $value['id'];?>">修改</a>
 		</td>
 	</tr>
 		
@@ -158,7 +158,7 @@
 ?>
 <div style="width: 800px; margin: auto">
 <h2>活动列表</h2>
-<a href="event.add.php">发布新活动</a>
+<a href="../admin/event.add.php">发布新活动</a>
 
 <table id="event" class="display" cellspacing="0" width="100%">
 	<thead>
@@ -181,8 +181,8 @@
 		<td>&nbsp;<?php echo $eventValue['holder']; ?></td>
 		<td>&nbsp;<?php echo $eventValue['place']; ?></td>
 		<td>&nbsp;<?php echo $eventValue['date']; ?></td>
-		<td>&nbsp;<a href="event.del.handle.php?id= <?php echo $eventValue['id'];?>">删除</a> &nbsp;
-		<a href="event.modify.php?id=<?php echo $eventValue['id'];?>">修改</a>
+		<td>&nbsp;<a href="../admin/event.del.handle.php?id= <?php echo $eventValue['id'];?>">删除</a> &nbsp;
+		<a href="../admin/event.modify.php?id=<?php echo $eventValue['id'];?>">修改</a>
 		</td>
 
 	</tr>
@@ -245,11 +245,11 @@
                     echo "否";
                 }?></td>
             <td><?php if($subValue['Added'] ==1){?>
-                    <a href="delFromList.handle.php?id=<?php echo $subValue['id'] ?>">从邮件列表删除</a>
+                    <a href="../admin/delFromList.handle.php?email=<?php echo $subValue['Email'] ?>">从邮件列表删除</a>
                 <?php
                 }
                 else{ ?>
-                    <a href="addToList.handle.php?id=<?php echo $subValue['id'] ?>">增加到邮件列表</a>
+                    <a href="../admin/addToList.handle.php?email=<?php echo $subValue['Email'] ?>">增加到邮件列表</a>
                 <?php } ?></td>
         </tr>
         <?php
@@ -262,7 +262,7 @@
 </div>
 <div style="width: 800px; margin: auto">
 <h2>链接列表</h2>
-<a href="link.add.php">发布新链接</a>
+<a href="../admin/link.add.php">发布新链接</a>
 
 <table id="link" class="display" cellspacing="0" width="100%">
 	<thead>
@@ -295,8 +295,8 @@
 				echo "其他";
 			}
 		?></td>
-		<td>&nbsp;<a href="link.del.handle.php?id=<?php echo $linkValue['id']; ?>">删除</a> &nbsp;
-		<a href="link.modify.php?id=<?php echo $linkValue['id'] ?>">修改</a>
+		<td>&nbsp;<a href="../admin/link.del.handle.php?id=<?php echo $linkValue['id']; ?>">删除</a> &nbsp;
+		<a href="../admin/link.modify.php?id=<?php echo $linkValue['id'] ?>">修改</a>
 		</td>
 	</tr>
     </tbody>
