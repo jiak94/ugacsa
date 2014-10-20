@@ -1,6 +1,6 @@
 <?php
 	require_once("connect.php");
-	$sql = "SELECT * from Article order by dateline desc";
+	$sql = "SELECT * from Article WHERE isRelease = '1' order by dateline desc";
 	$query = mysql_query($sql);
 	$count = 0;
 	if ($query&&mysql_num_rows($query)){
