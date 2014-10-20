@@ -39,6 +39,16 @@
         } );
 
         $(document).ready(function(){
+            $('#underReviewArticle').dataTable({
+                ordering: false,
+                "lengthMenu": [10],
+                "lengthChange": false,
+                searching: true,
+                "info": false
+            })
+        });
+
+        $(document).ready(function(){
             $('#event').dataTable({
                 ordering: false,
                 "lengthMenu": [10],
@@ -87,8 +97,10 @@
 <?php
 	
 
-	$sql = "select * from Article order by id desc";
+	$sql = "select * from Article WHERE isRelease ='1' order by id desc";
 	$query = mysql_query($sql);
+    $underReviewArticle = "select * from Article WHERE isRelease ='0' order by id desc";
+    $underReviewArticleQuery = mysql_query($underReviewArticle);
 
 	if($query && mysql_num_rows($query)){
 		while ($row = mysql_fetch_assoc($query)) {
@@ -99,13 +111,22 @@
 	else{
 		$data = array();
 	}
+
+    if($underReviewArticleQuery && mysql_num_rows($underReviewArticleQuery)){
+        while ($underReviewArticleRow = mysql_fetch_assoc($underReviewArticleQuery)){
+            $underReviewArticleData[] = $underReviewArticleRow;
+        }
+    }
+    else{
+        $underReviewArticleData = array();
+    }
 	
 ?>
 
 <h1>文章管理系统</h1>
 <br>
 <div style="width: 800px; margin: auto">
-<h2>文章列表</h2>
+<h2>已经发布的文章</h2>
 <a href="../admin/article.add.php">发布新文章</a>
 <table id="article" class="display" cellspacing="0" width="100%">
 	<thead>
@@ -123,10 +144,12 @@
 ?>
 	
 	<tr>
-		<td>&nbsp;<?php echo $value['title']; ?></td>
-		<td>&nbsp;<?php echo $value['author']; ?></td>
-		<td>&nbsp;<a href="../admin/article.del.handle.php?id= <?php echo $value['id'];?>">删除</a> &nbsp;
-		<a href="../admin/article.modify.php?id=<?php echo $value['id'];?>">修改</a>
+		<td><?php echo $value['title']; ?></td>
+		<td><?php echo $value['author']; ?></td>
+		<td>
+            <a href="../admin/article.del.handle.php?id= <?php echo $value['id'];?>">删除</a> &nbsp;
+            <a href="../admin/article.modify.php?id=<?php echo $value['id'];?>">修改</a> &nbsp;
+            <a href="../admin/unreleaseArticle.handle.php?id=<?php echo $value['id']?>">撤回</a>
 		</td>
 	</tr>
 		
@@ -140,6 +163,34 @@
     </tbody>
     <tfoot></tfoot>
 </table>
+</div>
+<div style="width: 800px; margin: auto">
+    <h2>等待审核的文章</h2>
+    <table id="underReviewArticle" class="display" cellspacing="0" width="100%">
+        <thead>
+        <tr>
+            <td>标题</td>
+            <td>作者</td>
+            <td>操作</td>
+        </tr>
+        </thead>
+        <tbody>
+        <?php
+            if(!empty($underReviewArticleData)) {
+                foreach ($underReviewArticleData as $underReview) {
+                    ?>
+                    <tr>
+                        <td><?php echo $underReview['title']; ?></td>
+                        <td><?php echo $underReview['author']; ?></td>
+                        <td><a href="../admin/releaseArticle.handle.php?id=<?php echo $underReview['id']; ?>">发布</a>
+                        </td>
+                    </tr>
+                <?php
+                }
+            }
+        ?>
+        </tbody>
+    </table>
 </div>
 <?php
 
