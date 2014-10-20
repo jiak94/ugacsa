@@ -45,17 +45,17 @@
 		
 		if($query){
 			mail($to, $subject, $message);
-			echo "<script> alert('修改成功,请返回重新登录'); window.location.href = 'login.php'</script>";
+			echo "<script> alert('修改成功,请返回重新登录'); window.location.href = '../admin/login.php'</script>";
 			exit();
 		}
 		else{
-			echo "<script> alert('服务器繁忙,请稍后再试'); window.location.href = 'forgetPassword.php'</script>";
+			echo "<script> alert('服务器繁忙,请稍后再试'); window.location.href = '../admin/forgetPassword.php'</script>";
 			exit();
 		}
 		
 	}
 	else{
-		echo "<script> alert('密保问题错误,请重试'); window.location.href = 'forgetPassword.php'</script>";	
+		echo "<script> alert('密保问题错误,请重试'); window.location.href = '../admin/forgetPassword.php'</script>";
 	}
 
 
