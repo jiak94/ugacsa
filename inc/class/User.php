@@ -206,6 +206,33 @@ class user {
            return false;
        }
    }
+    /*
+     * 检查数据库中是否存在一样的用户名
+     * @author: Jiakuan
+     * @date: 10/17/14
+     * @param: username
+     */
+    function checkDuplicate($username){
+        $sql = "SELECT * FROM Admin WHERE Username = '$username'";
+        $query = mysql_query($sql);
+        if(mysql_num_rows($query) == 0){
+            return false;
+        }
+        else{
+            return true;
+        }
+    }
+    /*
+     * 获取所有管理员的邮件
+     * @author: Jiakuan
+     * @date: 10/19/14
+     */
+    function getEmail(){
+        $sql = "SELECT Email From Admin";
+        $query = mysql_query($sql);
+        $result[] = mysql_fetch_array($query);
+        echo $result;
+    }
 }
 
 ?>
