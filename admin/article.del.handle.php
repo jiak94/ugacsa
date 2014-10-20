@@ -1,5 +1,6 @@
 <?php
 	require_once("../connect.php");
+    require_once("../inc/class/Article.php");
 
 	
 
@@ -14,11 +15,12 @@
 
 	
 	$id = $_GET['id'];
-	$deleteSql = "DELETE FROM Article WHERE id=$id";
 
-	if(mysql_query($deleteSql)){
-		echo "<script> alert('删除文章成功');window.location.href='manage.php'</script>";
-	}
+    $ARTICLE = new Article();
+
+    if($ARTICLE->deleteArticle($id)){
+        echo "<script> alert('删除文章成功');window.location.href='manage.php'</script>";
+    }
 	else{
 		echo "<script> alert('删除文章失败');window.location.href='manage.php'</script>";
 	}

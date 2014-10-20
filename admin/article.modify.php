@@ -1,6 +1,7 @@
 <?php
 
 	require_once("../connect.php");
+    require_once("../inc/class/Article.php");
 	
 	session_start();
 	if($_SESSION['login']==1){
@@ -14,8 +15,10 @@
 
 
 	$id = $_GET['id'];
-	$query = mysql_query("select * from Article where id=$id");
-	$data = mysql_fetch_assoc($query);
+	//$query = mysql_query("select * from Article where id=$id");
+	//$data = mysql_fetch_assoc($query);
+
+    $ARTICLE = new Article();
 
 ?>
 
@@ -37,27 +40,19 @@
 <h1>修改文章</h1>
 <form name="modifyArticleForm" id="modifyArticle" method="post" action="article.modify.handle.php">
 	<table>
-	<input type="hidden" name="id" value="<?php  echo $data['id']; ?>" >
+	<input type="hidden" name="id" value="<?php  echo $id; ?>" >
 	<tr>
 		<td>作者</td>
-		<td><input name="author" id="author" value="<?php echo($data['author']); ?>"></td>
+		<td><input name="author" id="author" value="<?php $ARTICLE->getAuthor($id); ?>"></td>
 	</tr>
 	<tr>
 		<td>标题</td>
-		<td><input name="title" id="title" value="<?php echo $data['title']; ?>"></td>
+		<td><input name="title" id="title" value="<?php $ARTICLE->getTitle($id); ?>"></td>
 	</tr>
-	<!--
-	<tr>
-		<td>简介</td>
-		<script id="editor1" name="description" type="text/plain" style="width:500px;height:300px;">
-			<?php echo $data['description'] ?>
-		</script>
-	</tr>
-	-->
 	<tr>
 		<td>正文</td>
 		<script id="editor" name="content" type="text/plain" style="width:1000px;height:1000px;">
-			<?php echo $data['content'] ?>
+			<?php $ARTICLE->getContent($id); ?>
 		</script>
 	</tr>
 	<tr>
@@ -72,7 +67,6 @@
     //实例化编辑器
     //建议使用工厂方法getEditor创建和引用编辑器实例，如果在某个闭包下引用该编辑器，直接调用UE.getEditor('editor')就能拿到相关的实例
     var ue = UE.getEditor('editor');
-	//var ue = UE.getEditor('editor1');
 
 </script>
 

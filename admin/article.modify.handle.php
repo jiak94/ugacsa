@@ -3,7 +3,7 @@
 
 
 	require_once("../connect.php");
-
+    require_once("../inc/class/Article.php");
 
 
 	session_start();
@@ -17,18 +17,20 @@
 
 
 
-	$id = $_GET['id'];
+	$id = $_POST['id'];
 	$title= $_POST['title'];
 	$author=$_POST['author'];
 	//$description=$_POST['description'];
 	$content=$_POST['content'];
 	$dateline=time();
 
-	$updateSql = "UPDATE Article SET title='$title', author='$author',  content='$content', dateline=$dateline WHERE id=$id";
+    $ARTICLE = new Article();
+
+
 	//when develop the sql statement, try to print it out to make sure it works properly.
-	if(mysql_query($updateSql)){
-		echo "<script> alert ('文章修改成功'); window.location.href = 'manage.php'</script>";
-	}
+    if($ARTICLE->updateArticle($title, $author, $content, $dateline, $id)){
+        echo "<script> alert ('文章修改成功'); window.location.href = 'manage.php'</script>";
+    }
 	else{
 		echo "<script> alert ('文章修改出错, 请稍后再试'); window.location.href='manage.php'</script>";
 	}
