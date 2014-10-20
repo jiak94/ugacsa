@@ -1,7 +1,7 @@
 <?php
 	require_once("connect.php");
 		
-	$sql = "select * from Article order by id desc";
+	$sql = "select * from Article WHERE isRelease ='1' order by id desc";
 	
 	$query = mysql_query($sql);
 	
