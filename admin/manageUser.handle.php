@@ -38,10 +38,15 @@ else if ($role == 'reviewer')
     $isReviewer = 1;
 }
 
-if($USER->createNewUser($username, $password, $isAdmin, $isPR, $isReviewer)){
-    echo "<script> alert('成功创建用户');window.location.href = '../manageUser.php'</script>";
+if(!$USER->checkDuplicate($username)){
+    if($USER->createNewUser($username, $password, $isAdmin, $isPR, $isReviewer)){
+        echo "<script> alert('成功创建用户');window.location.href = '../admin/manageUser.php'</script>";
+    }
+    else{
+        echo "wrong";
+    }
 }
 else{
-    echo "wrong";
+    echo "<script> alert('用户已存在, 请重新输入用户名');window.location.href = '../admin/manageUser.php'</script>";
 }
 ?>
