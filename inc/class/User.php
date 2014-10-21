@@ -5,7 +5,7 @@
  * Time: 10:26 AM
  */
 require_once("../connect.php");
-class user {
+class User {
     private $username;
     private $isAdmin;
     private $isPR;
@@ -223,15 +223,139 @@ class user {
         }
     }
     /*
+     * 获取管理员数量
+     * @author: Jiakuan
+     * @date: 10/20/2014
+     */
+    function getAdminNumber(){
+        $sql = "SELECT * FROM Admin WHERE isAdmin = '1'";
+        $query = mysql_query($sql);
+        $result = mysql_num_rows($query);
+        return $result;
+    }
+    /*
+     * 获取PR部门的人数
+     * @author: Jiakuan
+     * @date: 10/20/2014
+     */
+    function getPRNumber(){
+        $sql = "SELECT * FROM Admin WHERE isPR = '1'";
+        $query = mysql_query($sql);
+        $result = mysql_num_rows($query);
+        return $result;
+    }
+
+    /*
+     * 获取审稿人数
+     * @author: Jiakuan
+     * @date: 10/20/2014
+     */
+    function getReviewerNumber(){
+        $sql = "SELECT * FROM Admin WHERE isReviewer = '1'";
+        $query = mysql_query($sql);
+        $result = mysql_num_rows($query);
+        return $result;
+    }
+    /*
      * 获取所有管理员的邮件
      * @author: Jiakuan
      * @date: 10/19/14
      */
-    function getEmail(){
-        $sql = "SELECT Email From Admin";
+    function getAdminEmail(){
+        $address = array();
+
+        $sql = "SELECT * From Admin WHERE isAdmin = '1'";
         $query = mysql_query($sql);
-        $result[] = mysql_fetch_array($query);
-        echo $result;
+        if($query && mysql_num_rows($query)){
+            while($row = mysql_fetch_assoc($query)){
+                $data[] = $row;
+            }
+        }
+        foreach($data as $value){
+            $address[] = $value['Email'];
+        }
+
+        return $address;
+    }
+
+    /*
+     * 获取所有PR部门的邮件
+     * @author: Jiakuan
+     * @date: 10/19/14
+     */
+    function getPREmail(){
+        $address = array();
+
+        $sql = "SELECT * From Admin WHERE isPR = '1'";
+        $query = mysql_query($sql);
+        if($query && mysql_num_rows($query)){
+            while($row = mysql_fetch_assoc($query)){
+                $data[] = $row;
+            }
+        }
+        foreach($data as $value){
+            $address[] = $value['Email'];
+        }
+
+        return $address;
+    }
+
+    /*
+     * 获取所有审稿人的邮件
+     * @author: Jiakuan
+     * @date: 10/19/14
+     */
+    function getReviewerEmail(){
+        $address = array();
+
+        $sql = "SELECT * From Admin WHERE isReviewer = '1'";
+        $query = mysql_query($sql);
+        if($query && mysql_num_rows($query)){
+            while($row = mysql_fetch_assoc($query)){
+                $data[] = $row;
+            }
+        }
+        foreach($data as $value){
+            $address[] = $value['Email'];
+        }
+
+        return $address;
+    }
+
+    /*
+     * 获取所有人的邮件
+     * @author: Jiakuan
+     * @date: 10/20/2014
+     */
+    function getEmail(){
+        $address = array();
+
+        $sql = "SELECT * From Admin";
+        $query = mysql_query($sql);
+        if($query && mysql_num_rows($query)){
+            while($row = mysql_fetch_assoc($query)){
+                $data[] = $row;
+            }
+        }
+        foreach($data as $value){
+            $address[] = $value['Email'];
+        }
+
+        return $address;
+    }
+    /*
+     * 获得具体某个用户的邮箱地址
+     * @author: Jiakuan
+     * @date: 10/20/14
+     */
+    function getUserEmail($username){
+        $sql = "SELECT * FROM Admin WHERE Username = '$username'";
+        $query = mysql_query($sql);
+        if($query && mysql_num_rows($query)){
+            $data = mysql_fetch_assoc($query);
+        }
+
+        return $data['Email'];
     }
 }
 

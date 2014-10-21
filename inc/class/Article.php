@@ -14,8 +14,8 @@ class Article {
      * @date: 10/19/14
      * @param: 文章标题,作者, 内容,时间
      */
-    function addArticle($title, $author, $content, $dateline){
-        $sql = "INSERT INTO Article(title, author, content, dateline) VALUES('$title','$author','$content', $dateline)";
+    function addArticle($title, $author, $authorUsername, $content, $dateline){
+        $sql = "INSERT INTO Article(title, author, authorUsername, content, dateline, isRelease) VALUES('$title','$author', '$authorUsername','$content', '$dateline', '0')";
         $query = mysql_query($sql);
         if($query){
             return true;
@@ -35,7 +35,7 @@ class Article {
         $sql = "SELECT * From Article WHERE id = '$id'";
         $query = mysql_query($sql);
         $result = mysql_fetch_assoc($query);
-        echo $result['content'];
+        return $result['content'];
     }
 
     /*
@@ -48,7 +48,7 @@ class Article {
         $sql = "SELECT * From Article WHERE id = '$id'";
         $query = mysql_query($sql);
         $result = mysql_fetch_assoc($query);
-        echo $result['title'];
+        return $result['title'];
     }
 
     /*
@@ -61,7 +61,20 @@ class Article {
         $sql = "SELECT * From Article WHERE id = '$id'";
         $query = mysql_query($sql);
         $result = mysql_fetch_assoc($query);
-        echo $result['author'];
+        return $result['author'];
+    }
+
+    /*
+     * 获取文章作者的用户名
+     * @author: Jiakuan
+     * @date: 10/20/14
+     * @param: id
+     */
+    function getAuthorUsername($id){
+        $sql = "SELECT * From Article WHERE id = '$id'";
+        $query = mysql_query($sql);
+        $result = mysql_fetch_assoc($query);
+        return $result['authorUsername'];
     }
 
     /*
