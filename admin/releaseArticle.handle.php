@@ -8,16 +8,25 @@
     require_once("../connect.php");
     require_once("../inc/class/User.php");
     require_once("../inc/class/Article.php");
+    require_once("../inc/class/Email.php");
 
     session_start();
     $USER = new User($_SESSION['username']);
     $ARTICLE = new Article();
+    $EMAIL = new Email();
+
     $role = $USER->getRole();
     $currentUser = $USER->getUsername();
     $id = $_GET['id'];
 
+    $subject = "文章已通过审核";
+    $message = "你的文章".$ARTICLE->getTitle($id)."已经由".$USER->getUsername()."完成审核.\n并已发布在网站上.";
+
+    $recipient = $USER->getUserEmail($ARTICLE->getAuthorUsername($id));
+
     if($_SESSION['login']==1 && $role != '审稿人'){
-        echo "<script> alert ('您没有权限'); window.location.href = '../admin/manage.php'</script>";
+        $EMAIL->sendEmailTo($recipient, $subject, $message);
+        echo "<script> alert ('您没有权限进行发布'); window.location.href = '../admin/manage.php'</script>";
         exit();
     }
     else if($_SESSION['login']!= 1){
