@@ -37,6 +37,9 @@
 		<td>作者</td>
 		<td><input name="author" id="author" placehoder="作者"></td>
 	</tr>
+        <tr>
+            <td><input name="'authorUsername" id="authorUsername" type="hidden" value="<?php echo $_SESSION['username']; ?>"></td>
+        </tr>
 	<tr>
 		<td>标题</td>
 		<td><input name="title" id="title" placehoder="标题"></td>

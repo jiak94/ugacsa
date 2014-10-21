@@ -43,16 +43,16 @@
 	<input type="hidden" name="id" value="<?php  echo $id; ?>" >
 	<tr>
 		<td>作者</td>
-		<td><input name="author" id="author" value="<?php $ARTICLE->getAuthor($id); ?>"></td>
+		<td><input name="author" id="author" value="<?php echo $ARTICLE->getAuthor($id); ?>"></td>
 	</tr>
 	<tr>
 		<td>标题</td>
-		<td><input name="title" id="title" value="<?php $ARTICLE->getTitle($id); ?>"></td>
+		<td><input name="title" id="title" value="<?php echo $ARTICLE->getTitle($id); ?>"></td>
 	</tr>
 	<tr>
 		<td>正文</td>
 		<script id="editor" name="content" type="text/plain" style="width:1000px;height:1000px;">
-			<?php $ARTICLE->getContent($id); ?>
+			<?php echo $ARTICLE->getContent($id); ?>
 		</script>
 	</tr>
 	<tr>

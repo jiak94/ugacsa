@@ -4,6 +4,7 @@
 
 	require_once("../connect.php");
     require_once("../inc/class/Article.php");
+    require_once("../inc/class/Email.php");
 
 
 	session_start();
@@ -25,10 +26,14 @@
 	$dateline=time();
 
     $ARTICLE = new Article();
+    $EMAIL = new Email();
 
+    $message = "文章".$ARTICLE->getTitle($id)."已经被".$_SESSION['username']."修改, 请尽快审阅.";
+    $subject = "文章完成修改,等待审阅";
 
 	//when develop the sql statement, try to print it out to make sure it works properly.
     if($ARTICLE->updateArticle($title, $author, $content, $dateline, $id)){
+        $EMAIL->sendEmailToReviewer($subject, $message);
         echo "<script> alert ('文章修改成功'); window.location.href = 'manage.php'</script>";
     }
 	else{
