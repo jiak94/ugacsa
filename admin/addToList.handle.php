@@ -12,10 +12,9 @@ $email = $_GET['email'];
 
 $SUBSCRIBER = new Subscribe($email);
 
-if($SUBSCRIBER->addToList()){
-    echo "<script> alert('成功添加'); window.location.href = '../admin/manage.php'</script>";
-}
-else{
-    echo "<script> alert('错误,请重试'); window.location.href = '../admin/manage.php'</script>";
+if ($SUBSCRIBER->addToList()) {
+	echo "<script> alert('成功添加'); window.location.href = '../admin/manage.php'</script>";
+} else {
+	echo "<script> alert('错误,请重试'); window.location.href = '../admin/manage.php'</script>";
 }
 ?>

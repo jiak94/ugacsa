@@ -30,11 +30,13 @@
         UEDITOR_HOME_URL: URL
 
         // 服务器统一请求接口路径
-        , serverUrl: URL + "php/controller.php"
+        ,
+        serverUrl: URL + "php/controller.php"
 
         //工具栏上的所有的功能按钮和下拉框，可以在new编辑器的实例时选择自己需要的从新定义
-        
-        , toolbars: [["fullscreen","source","undo","redo","insertunorderedlist","insertorderedlist","unlink","link","cleardoc","selectall","searchreplace","preview","drafts","simpleupload","insertimage","music","snapscreen","emotion","insertvideo","attachment","insertframe","date","time","horizontal","anchor","spechars","blockquote","pasteplain","insertcode","template","background","bold","italic","underline","fontborder","strikethrough","forecolor","backcolor","superscript","subscript","justifyleft","justifycenter","justifyright","justifyjustify","touppercase","tolowercase","directionalityltr","directionalityrtl","indent","removeformat","formatmatch","autotypeset","customstyle","paragraph","rowspacingbottom","rowspacingtop","lineheight","fontfamily","fontsize","imagenone","imageleft","imageright","imagecenter"]]
+
+        ,
+        toolbars: [["fullscreen", "source", "undo", "redo", "insertunorderedlist", "insertorderedlist", "unlink", "link", "cleardoc", "selectall", "searchreplace", "preview", "drafts", "simpleupload", "insertimage", "music", "snapscreen", "emotion", "insertvideo", "attachment", "insertframe", "date", "time", "horizontal", "anchor", "spechars", "blockquote", "pasteplain", "insertcode", "template", "background", "bold", "italic", "underline", "fontborder", "strikethrough", "forecolor", "backcolor", "superscript", "subscript", "justifyleft", "justifycenter", "justifyright", "justifyjustify", "touppercase", "tolowercase", "directionalityltr", "directionalityrtl", "indent", "removeformat", "formatmatch", "autotypeset", "customstyle", "paragraph", "rowspacingbottom", "rowspacingtop", "lineheight", "fontfamily", "fontsize", "imagenone", "imageleft", "imageright", "imagecenter"]]
         //当鼠标放在工具栏上时显示的tooltip提示,留空支持自动多语言配置，否则以配置值为准
         //,labelMap:{
         //    'anchor':'', 'undo':''
@@ -315,7 +317,7 @@
 
         var configPath = document.getElementsByTagName('script');
 
-        return configPath[ configPath.length - 1 ].src;
+        return configPath[configPath.length - 1].src;
 
     }
 
@@ -342,7 +344,7 @@
 
     function optimizationPath(path) {
 
-        var protocol = /^[a-z]+:\/\//.exec(path)[ 0 ],
+        var protocol = /^[a-z]+:\/\//.exec(path)[0],
             tmp = null,
             res = [];
 
@@ -350,7 +352,7 @@
 
         path = path.replace(/\\/g, '/').split(/\//);
 
-        path[ path.length - 1 ] = "";
+        path[path.length - 1] = "";
 
         while (path.length) {
 

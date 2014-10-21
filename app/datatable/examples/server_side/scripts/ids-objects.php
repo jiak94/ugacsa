@@ -32,29 +32,29 @@ $columns = array(
 	array(
 		'db' => 'id',
 		'dt' => 'DT_RowId',
-		'formatter' => function( $d, $row ) {
+		'formatter' => function ($d, $row) {
 			// Technically a DOM id cannot start with an integer, so we prefix
 			// a string. This can also be useful if you have multiple tables
 			// to ensure that the id is unique with a different prefix
-			return 'row_'.$d;
+			return 'row_' . $d;
 		}
 	),
-	array( 'db' => 'first_name', 'dt' => 'first_name' ),
-	array( 'db' => 'last_name',  'dt' => 'last_name' ),
-	array( 'db' => 'position',   'dt' => 'position' ),
-	array( 'db' => 'office',     'dt' => 'office' ),
+	array('db' => 'first_name', 'dt' => 'first_name'),
+	array('db' => 'last_name', 'dt' => 'last_name'),
+	array('db' => 'position', 'dt' => 'position'),
+	array('db' => 'office', 'dt' => 'office'),
 	array(
-		'db'        => 'start_date',
-		'dt'        => 'start_date',
-		'formatter' => function( $d, $row ) {
-			return date( 'jS M y', strtotime($d));
+		'db' => 'start_date',
+		'dt' => 'start_date',
+		'formatter' => function ($d, $row) {
+			return date('jS M y', strtotime($d));
 		}
 	),
 	array(
-		'db'        => 'salary',
-		'dt'        => 'salary',
-		'formatter' => function( $d, $row ) {
-			return '$'.number_format($d);
+		'db' => 'salary',
+		'dt' => 'salary',
+		'formatter' => function ($d, $row) {
+			return '$' . number_format($d);
 		}
 	)
 );
@@ -62,7 +62,7 @@ $columns = array(
 $sql_details = array(
 	'user' => '',
 	'pass' => '',
-	'db'   => '',
+	'db' => '',
 	'host' => ''
 );
 
@@ -72,9 +72,9 @@ $sql_details = array(
  * server-side, there is no need to edit below this line.
  */
 
-require( 'ssp.class.php' );
+require('ssp.class.php');
 
 echo json_encode(
-	SSP::simple( $_GET, $sql_details, $table, $primaryKey, $columns )
+	SSP::simple($_GET, $sql_details, $table, $primaryKey, $columns)
 );
 

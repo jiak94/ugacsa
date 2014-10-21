@@ -6,12 +6,11 @@
  * Time: 9:45 PM
  */
 session_start();
-if($_SESSION['login']==1){
+if ($_SESSION['login'] == 1) {
 
-}
-else{
-    echo "<script> alert ('您没有访问权限, 请登录'); window.location.href = '../admin/login.php'</script>";
-    exit();
+} else {
+	echo "<script> alert ('您没有访问权限, 请登录'); window.location.href = '../admin/login.php'</script>";
+	exit();
 }
 
 require_once("../connect.php");
@@ -26,17 +25,15 @@ $email = $_POST['email'];
 
 $USER = new User($username);
 
-if($newPassword == $newPasswordAgain){
-    $hashPassword = hash('md5', $newPassword);
-}
-else{
-    echo "<script> alert('两次输入新密码不正确'); window.location.href = '../admin/forceChangePassword.php'</script>";
-    exit();
+if ($newPassword == $newPasswordAgain) {
+	$hashPassword = hash('md5', $newPassword);
+} else {
+	echo "<script> alert('两次输入新密码不正确'); window.location.href = '../admin/forceChangePassword.php'</script>";
+	exit();
 }
 
-if($USER->forceModifyPassword($newPassword, $email, $secretQuestion, $answer)){
-    echo "<script>alert('修改完成'); window.location.href = '../admin/manage.php'</script>";
-}
-else{
-    echo "<script>alert('Something wrong'); window.location.href = '../admin/forceChangePassword.php'</script>";
+if ($USER->forceModifyPassword($newPassword, $email, $secretQuestion, $answer)) {
+	echo "<script>alert('修改完成'); window.location.href = '../admin/manage.php'</script>";
+} else {
+	echo "<script>alert('Something wrong'); window.location.href = '../admin/forceChangePassword.php'</script>";
 }

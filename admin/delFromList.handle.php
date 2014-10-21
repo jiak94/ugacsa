@@ -12,10 +12,9 @@ $email = $_GET['email'];
 
 $SUBSCRIBER = new Subscribe($email);
 
-if($SUBSCRIBER->removeFromList()){
-    echo "<script> alert('成功移除'); window.location.href = '../admin/manage.php'</script>";
-}
-else{
-    echo "<script> alert('错误,请重试'); window.location.href = '../admin/manage.php'</script>";
+if ($SUBSCRIBER->removeFromList()) {
+	echo "<script> alert('成功移除'); window.location.href = '../admin/manage.php'</script>";
+} else {
+	echo "<script> alert('错误,请重试'); window.location.href = '../admin/manage.php'</script>";
 }
 ?>

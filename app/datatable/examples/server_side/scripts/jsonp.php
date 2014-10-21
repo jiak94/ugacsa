@@ -29,22 +29,22 @@ $primaryKey = 'id';
 // parameter represents the DataTables column identifier. In this case simple
 // indexes
 $columns = array(
-	array( 'db' => 'first_name', 'dt' => 0 ),
-	array( 'db' => 'last_name',  'dt' => 1 ),
-	array( 'db' => 'position',   'dt' => 2 ),
-	array( 'db' => 'office',     'dt' => 3 ),
+	array('db' => 'first_name', 'dt' => 0),
+	array('db' => 'last_name', 'dt' => 1),
+	array('db' => 'position', 'dt' => 2),
+	array('db' => 'office', 'dt' => 3),
 	array(
-		'db'        => 'start_date',
-		'dt'        => 4,
-		'formatter' => function( $d, $row ) {
-			return date( 'jS M y', strtotime($d));
+		'db' => 'start_date',
+		'dt' => 4,
+		'formatter' => function ($d, $row) {
+			return date('jS M y', strtotime($d));
 		}
 	),
 	array(
-		'db'        => 'salary',
-		'dt'        => 5,
-		'formatter' => function( $d, $row ) {
-			return '$'.number_format($d);
+		'db' => 'salary',
+		'dt' => 5,
+		'formatter' => function ($d, $row) {
+			return '$' . number_format($d);
 		}
 	)
 );
@@ -52,7 +52,7 @@ $columns = array(
 $sql_details = array(
 	'user' => '',
 	'pass' => '',
-	'db'   => '',
+	'db' => '',
 	'host' => ''
 );
 
@@ -61,9 +61,9 @@ $sql_details = array(
  * If you just want to use the basic configuration for DataTables with PHP
  * server-side, there is no need to edit below this line.
  */
-require( 'ssp.class.php' );
+require('ssp.class.php');
 
-echo $_GET['callback'].'('.json_encode(
-	SSP::simple( $_GET, $sql_details, $table, $primaryKey, $columns )
-).');';
+echo $_GET['callback'] . '(' . json_encode(
+		SSP::simple($_GET, $sql_details, $table, $primaryKey, $columns)
+	) . ');';
 

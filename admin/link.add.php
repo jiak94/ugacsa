@@ -5,8 +5,9 @@
 	<meta charset="utf-8">
 </head>
 <body>
-	<h1>添加新链接</h1>
-	<form id="form" name="form" method="post" action="link.add.handle.php">
+<h1>添加新链接</h1>
+
+<form id="form" name="form" method="post" action="link.add.handle.php">
 	<strong>网站名称:</strong>
 	<input id="title" name="title" placeholder="名称" required="true"><br>
 	<strong>网站链接:</strong>
@@ -19,6 +20,6 @@
 		<option value="other">其他</option>
 	</select><br>
 	<input type="submit" id="button" name="button">
-	</form>
+</form>
 </body>
 </html>
