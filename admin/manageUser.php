@@ -54,8 +54,9 @@ if ($query && mysql_num_rows($query)) {
 	<table id="example" class="display" cellspacing="0" width="100%">
 		<thead>
 		<tr>
-			<td>Username</td>
-			<td>Role</td>
+			<td>用户名</td>
+			<td>权限</td>
+            <td>邮箱地址</td>
 		</tr>
 		</thead>
 		<tbody>
@@ -75,6 +76,7 @@ if ($query && mysql_num_rows($query)) {
 							echo("普通账户");
 						}
 						?></td>
+                    <td><?php echo $user['Email']; ?></td>
 				</tr>
 			<?php
 			}
