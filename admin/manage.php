@@ -103,6 +103,9 @@ if ($_SESSION['login'] == 1) {
 			$("#listBlock").hide();
 			$("#linkBlock").fadeIn("slow");
 		}
+        function hideUserControl(){
+            $("#userControl").hide();
+        }
 
 	</script>
 	<style>
@@ -149,6 +152,11 @@ if ($_SESSION['login'] == 1) {
 	</style>
 </head>
 <body>
+<?php
+    if($USER->getRole() != "管理员"){
+        //echo "<script type='text/javascript'>hideUserControl();</script>";
+    }
+?>
 <div class="header">
 	<h1>后台管理系统</h1>
 </div>
@@ -161,7 +169,9 @@ if ($_SESSION['login'] == 1) {
 	<br>
 	<a href="../admin/logout.php">退出登录</a>
 	<br>
-	<a href="../admin/manageUser.php">用户管理</a>
+    <?php if($USER->getRole()=="管理员"): ?>
+	<a href="../admin/manageUser.php" id="userControl">用户管理</a>
+    <?php endif; ?>
 </div>
 
 
@@ -225,7 +235,9 @@ if ($underReviewArticleQuery && mysql_num_rows($underReviewArticleQuery)) {
 						<td>
 							<a href="../admin/article.del.handle.php?id= <?php echo $value['id']; ?>">删除</a> &nbsp;
 							<a href="../admin/article.modify.php?id=<?php echo $value['id']; ?>">修改</a> &nbsp;
+                            <?php if($USER->isAdmin()||$USER->isReviewer()):?>
 							<a href="../admin/unreleaseArticle.handle.php?id=<?php echo $value['id'] ?>">撤回</a>
+                            <?php endif; ?>
 						</td>
 					</tr>
 
