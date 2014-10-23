@@ -245,8 +245,6 @@ if ($underReviewArticleQuery && mysql_num_rows($underReviewArticleQuery)) {
 						<td><?php echo $value['title']; ?></td>
 						<td><?php echo $value['author']; ?></td>
 						<td>
-							<a href="../admin/article.del.handle.php?id= <?php echo $value['id']; ?>">删除</a> &nbsp;
-							<a href="../admin/article.modify.php?id=<?php echo $value['id']; ?>">修改</a> &nbsp;
                             <?php if($USER->isAdmin()||$USER->isReviewer()):?>
 							<a href="../admin/unreleaseArticle.handle.php?id=<?php echo $value['id'] ?>">撤回</a>
                             <?php endif; ?>
@@ -284,9 +282,13 @@ if ($underReviewArticleQuery && mysql_num_rows($underReviewArticleQuery)) {
 						<td><?php echo $underReview['author']; ?></td>
 						<td>
                             <a href="../newsDetail.php?id=<?php echo$underReview['id']; ?>">预览</a> &nbsp;
-                            <a href="../admin/releaseArticle.handle.php?id=<?php echo $underReview['id']; ?>">发布</a>
+                            <?php if($USER->getRole()!='普通用户'): ?>
+                            <a href="../admin/releaseArticle.handle.php?id=<?php echo $underReview['id']; ?>">发布</a> &nbsp;
+                                <?php if($USER->getRole()=="管理员"): ?>
                             <a href="../admin/article.del.handle.php?id= <?php echo $underReview['id']; ?>">删除</a> &nbsp;
+                                <?php endif;?>
                             <a href="../admin/article.modify.php?id=<?php echo $underReview['id']; ?>">修改</a> &nbsp;
+                            <?php endif; ?>
                         </td>
 					</tr>
 				<?php
