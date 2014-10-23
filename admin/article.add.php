@@ -25,40 +25,55 @@ if ($_SESSION['login'] == 1) {
 		div {
 			width: 100%;
 		}
+        body{
+            margin: 0;
+            min-width: 1100px;
+        }
+        .header{
+            background-color:#990000;
+            padding-top: 20px;
+            width: auto;
+            height: 80px;
+        }
+        form{
+            width: 1000px;
+            margin: auto;
+            padding-bottom: 100px;
+            padding-top: 30px;
+        }
+        #author{
+            width: 150px;
+            height: 30px;
+            font-size: medium;
+            border-radius: 5px;
+            margin: 10px;
+        }
+        #title{
+            width: 300px;
+            height: 30px;
+            font-size: medium;
+            border-radius: 5px;
+            margin: 10px;
+        }
+        #button{
+            margin-top: 10px;
+            width: 150px;
+            height: 30px;
+        }
 	</style>
 </head>
 <body>
-<h1>文章发布系统</h1>
-
+<div class="header">
+    <h1 align="center">文章发布系统</h1>
+</div>
+<div class="content">
 <form name="addArticleForm" id="newArticle" method="post" action="article.add.handle.php">
-	<table>
-		<tr>
-			<td>作者</td>
-			<td><input name="author" id="author" placehoder="作者"></td>
-		</tr>
-		<tr>
-			<td><input name="authorUsername" id="authorUsername" type="hidden"
-			           value="<?php echo $_SESSION['username']; ?>"></td>
-		</tr>
-		<tr>
-			<td>标题</td>
-			<td><input name="title" id="title" placehoder="标题"></td>
-		</tr>
-		<!--
-		<tr>
-			<td>简介</td>
-			<script id="editor1" name="description" type="text/plain" style="width:500px;height:300px;"></script>
-		</tr>
-		-->
-		<tr>
-			<td>正文</td>
-			<script id="editor" name="content" type="text/plain" style="width:1000px;"></script>
-		</tr>
-		<tr>
-			<td><input type="submit" name="button" id="button" value="提交"></td>
-		</tr>
-	</table>
 
+    <input name="title" id="title" placeholder="标题">
+	<input name="authorUsername" id="authorUsername" type="hidden" value="<?php echo $_SESSION['username']; ?>">
+    <input name="author" id="author" placeholder="作者" required="true">
+    <script id="editor" name="content" type="text/plain" style="width:1000px;height: 500px"></script>
+	<input type="submit" name="button" id="button" value="提交">
 </form>
 
 <script type="text/javascript">
@@ -71,7 +86,7 @@ if ($_SESSION['login'] == 1) {
 
 </script>
 
-
+</div>
 </body>
 </html>
 

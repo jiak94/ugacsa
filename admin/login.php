@@ -62,7 +62,7 @@
 			<form method="post" action="authentication.php">
 				<input id="username" name="username" placeholder="Username">
 				<br>
-				<input id="password" name="password" placeholder="password" type="password">
+				<input id="password" name="password" placeholder="Password" type="password">
 				<input type="submit" name="button" id="button" value="登录">
 			</form>
 		</div>
