@@ -37,7 +37,7 @@ if ($_SESSION['login'] == 1) {
 			<td><input name="author" id="author" placehoder="作者"></td>
 		</tr>
 		<tr>
-			<td><input name="'authorUsername" id="authorUsername" type="hidden"
+			<td><input name="authorUsername" id="authorUsername" type="hidden"
 			           value="<?php echo $_SESSION['username']; ?>"></td>
 		</tr>
 		<tr>
