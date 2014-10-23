@@ -111,6 +111,7 @@ if ($_SESSION['login'] == 1) {
 	<style>
 		body {
 			margin: 0px;
+            min-width: 1100px;
 		}
 
 		h1 {
@@ -118,11 +119,13 @@ if ($_SESSION['login'] == 1) {
 		}
 
 		.controlPanel {
+            float: left;
 			width: 150px;
 			height: auto;
-			float: left;
-			padding-left: 50px;
+            margin-left: 0px;
+			padding-left: 30px;
 			padding-top: 60px;
+            padding-bottom: 60px;
 		}
 
 		.header {
@@ -139,9 +142,15 @@ if ($_SESSION['login'] == 1) {
 			float: left;
 		}
 		.controlButtons{
+            width: auto;
+            height: 80px;
 			margin: auto;
-
 		}
+        .controlButtonsResize{
+            width: 800px;
+            margin: auto;
+            height: 80px;
+        }
 		#articleControl, #eventControl, #linkControl, #listControl{
 			float: left;
 			width: 150px;
@@ -160,6 +169,15 @@ if ($_SESSION['login'] == 1) {
 <div class="header">
 	<h1>后台管理系统</h1>
 </div>
+<div class="controlButtons">
+    <div class="controlButtonsResize">
+    <button id="articleControl" name="articleControl" onclick="articleClick()" >文章管理</button>
+    <button id="eventControl" name="eventControl" onclick="eventClick()">活动管理</button>
+    <button id="listControl" name="listControl" onclick="listClick()">邮件列表管理</button>
+    <button id="linkControl" name="linkControl" onclick="linkClick()">实用信息管理</button>
+        </div>
+</div>
+<div class="content" style="width: 1035px;margin: auto">
 <div class="controlPanel">
 	<strong>你好, <?php echo $currentUser; ?></strong>
 	<br>
@@ -201,12 +219,6 @@ if ($underReviewArticleQuery && mysql_num_rows($underReviewArticleQuery)) {
 }
 
 ?>
-<div class="controlButtons">
-	<button id="articleControl" name="articleControl" onclick="articleClick()" >文章管理</button>
-	<button id="eventControl" name="eventControl" onclick="eventClick()">活动管理</button>
-	<button id="listControl" name="listControl" onclick="listClick()">邮件列表管理</button>
-	<button id="linkControl" name="linkControl" onclick="linkClick()">实用信息管理</button>
-</div>
 <div class="information">
 <div style="width: auto; float: left; margin-top: 50px" id="articleBlock">
 	<div>
@@ -270,8 +282,12 @@ if ($underReviewArticleQuery && mysql_num_rows($underReviewArticleQuery)) {
 					<tr>
 						<td><?php echo $underReview['title']; ?></td>
 						<td><?php echo $underReview['author']; ?></td>
-						<td><a href="../admin/releaseArticle.handle.php?id=<?php echo $underReview['id']; ?>">发布</a>
-						</td>
+						<td>
+                            <a href="../newsDetail.php?id=<?php echo$underReview['id']; ?>">预览</a> &nbsp;
+                            <a href="../admin/releaseArticle.handle.php?id=<?php echo $underReview['id']; ?>">发布</a>
+                            <a href="../admin/article.del.handle.php?id= <?php echo $underReview['id']; ?>">删除</a> &nbsp;
+                            <a href="../admin/article.modify.php?id=<?php echo $underReview['id']; ?>">修改</a> &nbsp;
+                        </td>
 					</tr>
 				<?php
 				}
@@ -453,6 +469,7 @@ if ($subscribeQuery && mysql_num_rows($subscribeQuery)) {
 		}
 		?>
 	</div>
+</div>
 </div>
 </div>
 </body>
