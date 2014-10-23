@@ -6,6 +6,7 @@ $id = $_GET['id'];
 $sql = "select * from Article WHERE id=$id";
 
 $query = mysql_query($sql);
+$url = $_SERVER['HTTP_REFERER'];
 
 $data = mysql_fetch_assoc($query);
 ?>
@@ -87,7 +88,7 @@ $data = mysql_fetch_assoc($query);
 </div>
 
 <div class="content">
-	<a href="news.php" style="position: relative; left: 150px;text-decoration: underline;">&lt;返回</a>
+	<a href="<?php echo $url; ?>" style="position: relative; left: 150px;text-decoration: underline;">&lt;返回</a>
 
 	<div id="backToTop"></div>
 	<div class="content_resize">
