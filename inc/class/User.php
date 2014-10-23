@@ -110,9 +110,9 @@ class User
 	 * @date: 10/16/14
 	 * @param: 用户名
 	 */
-	function setUserAsAdmin($username)
+	function setUserAsAdmin($id)
 	{
-		$sql = "UPDATE Admin SET isAdmin = 1 WHERE Username='$username'";
+		$sql = "UPDATE Admin SET isAdmin = '1', isPR='0', isReviewer='0' WHERE id='$id'";
 
 		if (mysql_query($sql)) {
 			return true;
@@ -127,9 +127,9 @@ class User
 	 * @date: 10/16/14
 	 * @param: 用户名,密码
 	 */
-	function setUserAsPR($username)
+	function setUserAsPR($id)
 	{
-		$sql = "UPDATE Admin Set isPR = 1 WHERE Username='$username'";
+		$sql = "UPDATE Admin Set isPR = '1', isAdmin ='0', isReviewer='0' WHERE id='$id'";
 
 		if (mysql_query($sql)) {
 			return true;
@@ -144,9 +144,9 @@ class User
 	 * @date: 10/16/14
 	 * @param: 用户名
 	 */
-	function setUserAsReviewer($username)
+	function setUserAsReviewer($id)
 	{
-		$sql = "UPDATE Admin SET isReviewer =1 WHERE Username = '$username'";
+		$sql = "UPDATE Admin SET isReviewer ='1', isPR='0', isAdmin ='0' WHERE id = '$id'";
 
 		if (mysql_query($sql)) {
 			return true;
@@ -154,6 +154,16 @@ class User
 			return false;
 		}
 	}
+
+    function setUserAsNormal($id){
+        $sql = "UPDATE Admin SET isAdmin = '0', isPR ='0', isReviewer ='0' WHERE id = '$id'";
+        if(mysql_query($sql)){
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
 
 	/*
 	 * 创建新成员
@@ -374,6 +384,30 @@ class User
 			return "NULL";
 		}
 	}
+    /*
+     * 获取其他人的权限
+     * @author: Jiakuan
+     * @date: 10/23/14
+     */
+    function getOthersRole($id){
+        $sql = "SELECT * FROM Admin WHERE id='$id'";
+        $query = mysql_query($sql);
+        if($query && mysql_num_rows($query)){
+            $data = mysql_fetch_array($query);
+        }
+        if($data['isAdmin']==1){
+            return "管理员";
+        }
+        else if($data['isPR']==1){
+            return "发稿人";
+        }
+        else if($data['isReviewer']==1){
+            return "审稿人";
+        }
+        else{
+            return "普通用户";
+        }
+    }
 }
 
 ?>
