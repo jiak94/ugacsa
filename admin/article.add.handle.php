@@ -1,7 +1,7 @@
 <?php
 require_once("../connect.php");
 require_once("../inc/class/Article.php");
-require_once("../inc/class/Email");
+require_once("../inc/class/Email.php");
 
 
 session_start();
