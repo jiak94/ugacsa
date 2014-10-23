@@ -97,7 +97,7 @@ $role = $USER->getRole();
             margin-left: auto;
             width: auto;
         }
-        #articleControl, #eventControl, #linkControl, #listControl{
+        #back, #users, #add{
             float: left;
             width: 150px;
             height: 40px;
@@ -124,9 +124,9 @@ $role = $USER->getRole();
     <?php endif; ?>
 </div>
 <div class="controlButtons">
-    <button id="articleControl" name="articleControl" onclick="window.location.href='../admin/manage.php'">返回控制面板</button>
-    <button id="eventControl" name="eventControl" onclick="showViewUser()">查看当前用户</button>
-    <button id="listControl" name="listControl" onclick="showAddUser()">增加用户</button>
+    <button id="back" name="back" onclick="window.location.href='../admin/manage.php'">返回控制面板</button>
+    <button id="users" name="users" onclick="showViewUser()">查看当前用户</button>
+    <button id="add" name="add" onclick="showAddUser()">增加用户</button>
 </div>
 <div class="content" style="width: auto; float: left">
     <div style="width: 600px; margin: auto; margin-left: 30px; margin-top: 30px" class="viewUser">
@@ -151,7 +151,7 @@ $role = $USER->getRole();
                         <td><?php if ($user['isAdmin'] == 1) {
                                 echo("管理员");
                             } else if ($user['isPR'] == 1) {
-                                echo("PR 部门");
+                                echo("发稿人");
                             } else if ($user['isReviewer'] == 1) {
                                 echo("审稿人");
                             } else {
