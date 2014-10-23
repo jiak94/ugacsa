@@ -291,10 +291,11 @@ class User
 				$data[] = $row;
 			}
 		}
-		foreach ($data as $value) {
-			$address[] = $value['Email'];
-		}
-
+        if(!empty($data)) {
+            foreach ($data as $value) {
+                $address[] = $value['Email'];
+            }
+        }
 		return $address;
 	}
 
@@ -314,10 +315,11 @@ class User
 				$data[] = $row;
 			}
 		}
-		foreach ($data as $value) {
-			$address[] = $value['Email'];
-		}
-
+        if(!empty($data)) {
+            foreach ($data as $value) {
+                $address[] = $value['Email'];
+            }
+        }
 		return $address;
 	}
 
@@ -337,9 +339,11 @@ class User
 				$data[] = $row;
 			}
 		}
-		foreach ($data as $value) {
-			$address[] = $value['Email'];
-		}
+        if(!empty($data)) {
+            foreach ($data as $value) {
+                $address[] = $value['Email'];
+            }
+        }
 
 		return $address;
 	}
@@ -408,6 +412,22 @@ class User
             return "普通用户";
         }
     }
-}
 
+    /*
+     * 删除用户
+     * @author: Jiakuan
+     * @date: 10/23/14
+     * @param: id
+     */
+    function delUser($id){
+        $sql = "Delete FROM Admin WHERE id='$id'";
+        $query = mysql_query($sql);
+        if($query){
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
+}
 ?>
