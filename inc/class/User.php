@@ -448,14 +448,13 @@ class User
     function secretQuestionSet($id){
         $sql = "SELECT * FROM Admin WHERE id='$id'";
         $query = mysql_query($sql);
-        if(mysql_num_rows($query)==0){
+        $result = mysql_fetch_array($query);
+
+        if($result['SecretQuestion']==NULL){
             return false;
-        }
-        else if(mysql_num_rows($query)!=0){
-            return true;
         }
         else{
-            return false;
+            return true;
         }
     }
 }
