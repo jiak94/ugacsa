@@ -12,6 +12,7 @@ class User
 	private $isAdmin;
 	private $isPR;
 	private $isReviewer;
+    private $id;
 
 
 	/*
@@ -31,8 +32,18 @@ class User
 		$this->isAdmin = $row['isAdmin'];
 		$this->isPR = $row['isPR'];
 		$this->isReviewer = $row['isReviewer'];
+        $this->id = $row['id'];
 
 	}
+
+    /*
+     * 获取用户id
+     * @author: Jiakuan
+     * @date: 10/24/14
+     */
+    function getMyId(){
+        return $this->id;
+    }
 
 	/*
 	 * 获取用户名
@@ -376,9 +387,9 @@ class User
 	 * @author: Jiakuan
 	 * @date: 10/20/14
 	 */
-	function getUserEmail($username)
+	function getUserEmail($id)
 	{
-		$sql = "SELECT * FROM Admin WHERE Username = '$username'";
+		$sql = "SELECT * FROM Admin WHERE id = '$id'";
 		$query = mysql_query($sql);
 		if ($query && mysql_num_rows($query)) {
 			$data = mysql_fetch_array($query);
@@ -423,6 +434,24 @@ class User
         $sql = "Delete FROM Admin WHERE id='$id'";
         $query = mysql_query($sql);
         if($query){
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
+    /*
+     * 获取密保问题
+     * @author: Jiakuan
+     * @date: 10/24/14
+     */
+    function secretQuestionSet($id){
+        $sql = "SELECT * FROM Admin WHERE id='$id'";
+        $query = mysql_query($sql);
+        if(mysql_num_rows($query)==0){
+            return false;
+        }
+        else if(mysql_num_rows($query)!=0){
             return true;
         }
         else{
