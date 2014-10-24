@@ -29,6 +29,7 @@ if ($_SESSION['login'] == 1) {
 	<script type="text/javascript" language="javascript"
 	        src="../app/datatable/examples/resources/syntax/shCore.js"></script>
 	<script type="text/javascript" language="javascript" class="init">
+        //$.noConflict();
 		$(document).ready(function () {
 			$('#article').dataTable({
 				ordering: false,
@@ -69,6 +70,13 @@ if ($_SESSION['login'] == 1) {
 				searching: true,
 				"info": false
 			});
+            $('#request').dataTable({
+                ordering: false,
+                "lengthMenu": [10],
+                "lengthChange": false,
+                searching: true,
+                "info": false
+            });
 		});
 
 		$(document).ready(function () {
@@ -76,6 +84,7 @@ if ($_SESSION['login'] == 1) {
 			$("#eventBlock").hide();
 			$("#listBlock").hide();
 			$("#linkBlock").hide();
+            $(".form").hide();
 
 		});
 
@@ -103,8 +112,9 @@ if ($_SESSION['login'] == 1) {
 			$("#listBlock").hide();
 			$("#linkBlock").fadeIn("slow");
 		}
-        function hideUserControl(){
-            $("#userControl").hide();
+        function inputConfirm(){
+            $(".confirm").hide();
+            $(".form").fadeIn();
         }
 
 	</script>
@@ -120,7 +130,7 @@ if ($_SESSION['login'] == 1) {
 
 		.controlPanel {
             float: left;
-			width: 150px;
+			width: 130px;
 			height: auto;
             margin-left: 0px;
 			padding-left: 30px;
@@ -140,6 +150,7 @@ if ($_SESSION['login'] == 1) {
 
 		.information {
 			float: left;
+            width: 830px;
 		}
 		.controlButtons{
             width: auto;
@@ -218,8 +229,56 @@ if ($underReviewArticleQuery && mysql_num_rows($underReviewArticleQuery)) {
 	$underReviewArticleData = array();
 }
 
+
+    $requestSql = "SELECT * FROM Request WHERE accept='0'";
+    $requestQuery = mysql_query($requestSql);
+    if($requestQuery && mysql_num_rows($requestQuery)){
+        while($row = mysql_fetch_assoc($requestQuery)){
+            $requestData[] = $row;
+        }
+    }
+
 ?>
 <div class="information">
+<? if($USER->getRole()=="管理员"&&(!empty($requestData))):
+
+    ?>
+<div style="width: auto; float: left; margin-top: 50px" id="requestBlock">
+        <div class="RequestPanel" style="width: 800px; float: left">
+            <h2>注册请求</h2>
+            <table id="request" class="display" cellspacing="0" width="100%">
+                <thead>
+                <tr>
+                    <td>名字</td>
+                    <td>部门</td>
+                    <td>确认</td>
+                </tr>
+                </thead>
+                <tbody>
+                <?php
+                if(!empty($requestData)) {
+                    foreach ($requestData as $requestValue) {
+                        ?>
+                        <tr>
+                            <td><?php echo $requestValue['realName']; ?></td>
+                            <td><?php echo $requestValue['department']; ?></td>
+                            <td><a href="#" class="confirm" onclick="inputConfirm();">确认手动添加</a>
+                                <form name="form" action="../admin/requestConfirm.php?id=<?php echo $requestValue['id']; ?>" method="post" class="form">
+                                    <input name="account" id="account" placeholder="账号" required="true">
+                                    <input name="password" id="password" placeholder="临时密码" required="true">
+                                    <input type="submit" name="button">
+                                </form>
+                            </td>
+                        </tr>
+                    <?php
+                    }
+                }
+                ?>
+                </tbody>
+            </table>
+        </div>
+</div>
+<?php endif; ?>
 <div style="width: auto; float: left; margin-top: 50px" id="articleBlock">
 	<div>
 		<a href="../admin/article.add.php">发布新文章</a>
