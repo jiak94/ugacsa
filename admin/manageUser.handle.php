@@ -6,7 +6,7 @@
  * Time: 11:08 PM
  */
 require_once("../connect.php");
-require_once("../inc/class/user.php");
+require_once("../inc/class/User.php");
 session_start();
 $currentUser = $_SESSION['username'];
 if ($_SESSION['login'] == 1) {
