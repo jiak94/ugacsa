@@ -85,7 +85,6 @@ if ($query && mysql_num_rows($query)) {
 </div>
 
 <div class="content">
-	<img src="img/arch.png" id="arch"/>
 
 	<div class="content_resize">
 		<div class="leftPart">
