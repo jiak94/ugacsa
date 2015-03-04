@@ -46,7 +46,7 @@ $id = $USER->getMyId();
             margin: auto;
         }
 
-        #newPassword {
+        #newPassword, #newPasswordAgain{
             height: 20px;
             width: 150px;
             border-radius: 5px;
@@ -54,7 +54,7 @@ $id = $USER->getMyId();
             padding-left: 10px
         }
 
-        #secretQuestion, #newPasswordAgain, #answer, #email {
+        #secretQuestion, #answer, #email {
             height: 20px;
             width: 150px;
             margin-top: 10px;
