@@ -1037,7 +1037,7 @@ if ($linkQuery && mysql_num_rows($linkQuery)) {
 						?>
 						<div class="newsContent" id="newsLast">
 							<br>
-							<a href="newsDescription.php?id=<?php echo $value['id']; ?>"
+							<a href="newsDetail.php?id=<?php echo $value['id']; ?>"
 							   style="margin-left:50px;"><? echo($value["title"]); ?></a>
 						</div>
 						<?
@@ -1046,7 +1046,7 @@ if ($linkQuery && mysql_num_rows($linkQuery)) {
 					?>
 					<div class="newsContent">
 						<br>
-						<a href="newsDescription.php?id=<?php echo $value['id']; ?>"
+						<a href="newsDetail.php?id=<?php echo $value['id']; ?>"
 						   style="margin-left:50px;"><?php echo($value["title"]); ?></a>
 					</div>
 				<?php
