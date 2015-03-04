@@ -13,6 +13,10 @@
             $("#login").hide();
             $("#request").fadeIn();
         }
+        function showLogIn() {
+            $("#login").fadeIn();
+            $("request").hide();
+        }
     </script>
 </head>
 <body>
@@ -38,21 +42,15 @@
 		margin: auto;
 	}
 
-	#username, #realName {
+	#username, #password, #realName, #department, #email {
 		height: 20px;
 		width: 150px;
 		border-radius: 5px;
 		font-size: medium;
-		padding-left: 10px
+		padding-left: 10px;
+        margin-top: 10px;
 	}
 
-	#password, #department, #email {
-		height: 20px;
-		width: 150px;
-		margin-top: 10px;
-		border-radius: 5px;
-		padding-left: 10px;
-	}
 
 	#button, {
 		width: 50px;
@@ -97,6 +95,7 @@
                 <br>
                 <input id="email" name="email" placeholder="Email" required="true">
                 <input type="submit" name="requestButton" id="requestButton" value="提交申请">
+                <a href="#" onclick="showLogIn()"><strong>已有账号</strong></a>
             </form>
         </div>
     </div>
